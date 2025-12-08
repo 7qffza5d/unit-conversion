@@ -1,1 +1,1 @@
-# unit-conversion
+This is a (work in progress) unit conversion calculator.
