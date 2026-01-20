@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Simple Website</title>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <h1>Task List</h1>
-        <p id="msg">Current tasks:</p>
-        <ul>
-          <li class="list">we've yet to do anything</li>
-           <li class="list">add literally anything</li>
-           <li>units</li>
-           <li>frontend</li>
-           <li>right</li>
-        </ul>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        
+        <div class="converter-card">
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="length">Length</option>
+                    <option value="mass">Mass</option>
+                    <option value="volume">Volume</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fromValue">From</label>
+                <div class="input-row">
+                    <input type="number" id="fromValue" value="1" placeholder="Enter value">
+                    <select id="fromUnit"></select>
+                </div>
+            </div>
+
+            <div class="swap-button">
+                <button id="swapBtn">⇅ Swap</button>
+            </div>
+
+            <div class="form-group">
+                <label for="toValue">To</label>
+                <div class="input-row">
+                    <input type="text" id="toValue" readonly placeholder="Result">
+                    <select id="toUnit"></select>
+                </div>
+            </div>
+
+            <div id="result" class="result-display"></div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            Loading units...
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>
