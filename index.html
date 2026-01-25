@@ -22,10 +22,12 @@
             </div>
 
             <div class="form-group">
-                <label for="fromValue">From</label>
+                <label>From</label>
                 <div class="input-row">
                     <input type="number" id="fromValue" value="1" placeholder="Enter value">
-                    <select id="fromUnit"></select>
+                    <button class="unit-selector-btn" id="fromUnitBtn">
+                        <span class="unit-display" id="fromUnitDisplay">Select Unit</span>
+                    </button>
                 </div>
             </div>
 
@@ -34,10 +36,12 @@
             </div>
 
             <div class="form-group">
-                <label for="toValue">To</label>
+                <label>To</label>
                 <div class="input-row">
                     <input type="text" id="toValue" readonly placeholder="Result">
-                    <select id="toUnit"></select>
+                    <button class="unit-selector-btn" id="toUnitBtn">
+                        <span class="unit-display" id="toUnitDisplay">Select Unit</span>
+                    </button>
                 </div>
             </div>
 
@@ -46,6 +50,20 @@
 
         <div id="loading" class="loading" style="display: none;">
             Loading units...
+        </div>
+    </div>
+
+    <!-- Unit Selection Modal -->
+    <div id="unitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Select Unit</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="unitSearch" placeholder="Search units..." class="search-box">
+                <div id="unitList" class="unit-list"></div>
+            </div>
         </div>
     </div>
 

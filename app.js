@@ -1,9 +1,12 @@
 // Cache for loaded unit data
 const unitCache = {};
+let currentUnits = null;
+let currentModalTarget = null; // 'from' or 'to'
+let selectedFromUnit = null;
+let selectedToUnit = null;
 
 // Load units from JSON file
 async function loadCategory(category) {
-    // Check cache first
     if (unitCache[category]) {
         return unitCache[category];
     }
@@ -23,67 +26,123 @@ async function loadCategory(category) {
     }
 }
 
-// Convert between units
-function convert(value, fromUnit, toUnit, units, category) {
-    if (category === 'temperature') {
-        // Temperature uses special conversion functions
-        const siValue = units[fromUnit].toSI(value);
-        return units[toUnit].fromSI(siValue);
-    } else {
-        // Regular units use factors
-        const siValue = value * units[fromUnit].factor;
-        return siValue / units[toUnit].factor;
+// Convert between units using factor and offset (with fraction support)
+function convert(value, fromUnit, toUnit, units) {
+    // Get factors (support both decimal and fraction)
+    const fromFactor = units[fromUnit].factorNum ? 
+        units[fromUnit].factorNum / units[fromUnit].factorDen : 
+        units[fromUnit].factor || 1;
+    
+    const toFactor = units[toUnit].factorNum ? 
+        units[toUnit].factorNum / units[toUnit].factorDen : 
+        units[toUnit].factor || 1;
+    
+    const fromOffset = units[fromUnit].offset || 0;
+    const toOffset = units[toUnit].offset || 0;
+    
+    // Convert to SI
+    const siValue = (value + fromOffset) * fromFactor;
+    
+    // Convert from SI to target
+    const result = (siValue / toFactor) - toOffset;
+    
+    return result;
+}
+
+// Open unit selection modal
+function openUnitModal(target) {
+    currentModalTarget = target;
+    const modal = document.getElementById('unitModal');
+    const searchBox = document.getElementById('unitSearch');
+    
+    modal.classList.add('show');
+    searchBox.value = '';
+    searchBox.focus();
+    
+    renderUnitList();
+}
+
+// Close unit selection modal
+function closeUnitModal() {
+    const modal = document.getElementById('unitModal');
+    modal.classList.remove('show');
+}
+
+// Render unit list in modal
+function renderUnitList(searchTerm = '') {
+    const unitList = document.getElementById('unitList');
+    unitList.innerHTML = '';
+    
+    if (!currentUnits) return;
+    
+    const selectedUnit = currentModalTarget === 'from' ? selectedFromUnit : selectedToUnit;
+    
+    for (const [key, unit] of Object.entries(currentUnits)) {
+        // Filter by search term
+        if (searchTerm && !unit.name.toLowerCase().includes(searchTerm.toLowerCase()) 
+            && !unit.symbol.toLowerCase().includes(searchTerm.toLowerCase())) {
+            continue;
+        }
+        
+        const unitCard = document.createElement('div');
+        unitCard.className = 'unit-card';
+        if (key === selectedUnit) {
+            unitCard.classList.add('selected');
+        }
+        
+        // Create unit icon with first letter or symbol
+        const iconText = unit.symbol.length <= 3 ? unit.symbol : unit.name.charAt(0);
+        
+        unitCard.innerHTML = `
+            <div class="unit-card-header">
+                <div class="unit-icon">${iconText}</div>
+                <div class="unit-card-title">
+                    <div class="unit-name">${unit.name}</div>
+                    <div class="unit-symbol">${unit.symbol}</div>
+                </div>
+            </div>
+            ${unit.description ? `<div class="unit-info">${unit.description}</div>` : ''}
+            ${unit.system ? `<span class="unit-system">${unit.system}</span>` : ''}
+        `;
+        
+        unitCard.addEventListener('click', () => selectUnit(key, unit));
+        unitList.appendChild(unitCard);
     }
 }
 
-// Populate unit dropdowns
-function populateUnits(units) {
-    const fromSelect = document.getElementById('fromUnit');
-    const toSelect = document.getElementById('toUnit');
-    
-    fromSelect.innerHTML = '';
-    toSelect.innerHTML = '';
-    
-    for (const [key, unit] of Object.entries(units)) {
-        const option1 = document.createElement('option');
-        option1.value = key;
-        option1.textContent = `${unit.name} (${unit.symbol})`;
-        fromSelect.appendChild(option1);
-        
-        const option2 = document.createElement('option');
-        option2.value = key;
-        option2.textContent = `${unit.name} (${unit.symbol})`;
-        toSelect.appendChild(option2);
+// Select a unit from modal
+function selectUnit(key, unit) {
+    if (currentModalTarget === 'from') {
+        selectedFromUnit = key;
+        document.getElementById('fromUnitDisplay').textContent = `${unit.name} (${unit.symbol})`;
+    } else {
+        selectedToUnit = key;
+        document.getElementById('toUnitDisplay').textContent = `${unit.name} (${unit.symbol})`;
     }
     
-    // Set default selections
-    if (toSelect.options.length > 1) {
-        toSelect.selectedIndex = 1;
-    }
+    closeUnitModal();
+    updateConversion();
 }
 
 // Update conversion result
 function updateConversion() {
-    const category = document.getElementById('category').value;
     const fromValue = parseFloat(document.getElementById('fromValue').value);
-    const fromUnit = document.getElementById('fromUnit').value;
-    const toUnit = document.getElementById('toUnit').value;
     const toValueInput = document.getElementById('toValue');
     const resultDiv = document.getElementById('result');
     
-    if (!unitCache[category] || isNaN(fromValue) || !fromUnit || !toUnit) {
+    if (!currentUnits || isNaN(fromValue) || !selectedFromUnit || !selectedToUnit) {
         toValueInput.value = '';
         resultDiv.classList.remove('show');
         return;
     }
     
-    const result = convert(fromValue, fromUnit, toUnit, unitCache[category], category);
+    const result = convert(fromValue, selectedFromUnit, selectedToUnit, currentUnits);
     const formattedResult = result.toFixed(6).replace(/\.?0+$/, '');
     
     toValueInput.value = formattedResult;
     
-    const fromUnitData = unitCache[category][fromUnit];
-    const toUnitData = unitCache[category][toUnit];
+    const fromUnitData = currentUnits[selectedFromUnit];
+    const toUnitData = currentUnits[selectedToUnit];
     
     resultDiv.textContent = `${fromValue} ${fromUnitData.symbol} = ${formattedResult} ${toUnitData.symbol}`;
     resultDiv.classList.add('show');
@@ -91,15 +150,22 @@ function updateConversion() {
 
 // Swap units
 function swapUnits() {
-    const fromSelect = document.getElementById('fromUnit');
-    const toSelect = document.getElementById('toUnit');
+    const temp = selectedFromUnit;
+    selectedFromUnit = selectedToUnit;
+    selectedToUnit = temp;
+    
+    if (selectedFromUnit && currentUnits[selectedFromUnit]) {
+        document.getElementById('fromUnitDisplay').textContent = 
+            `${currentUnits[selectedFromUnit].name} (${currentUnits[selectedFromUnit].symbol})`;
+    }
+    
+    if (selectedToUnit && currentUnits[selectedToUnit]) {
+        document.getElementById('toUnitDisplay').textContent = 
+            `${currentUnits[selectedToUnit].name} (${currentUnits[selectedToUnit].symbol})`;
+    }
+    
     const fromValue = document.getElementById('fromValue');
     const toValue = document.getElementById('toValue');
-    
-    const tempUnit = fromSelect.value;
-    fromSelect.value = toSelect.value;
-    toSelect.value = tempUnit;
-    
     fromValue.value = toValue.value || '1';
     
     updateConversion();
@@ -112,30 +178,69 @@ async function init() {
     
     // Load initial category
     loadingDiv.style.display = 'block';
-    const units = await loadCategory(categorySelect.value);
+    currentUnits = await loadCategory(categorySelect.value);
     loadingDiv.style.display = 'none';
     
-    if (units) {
-        populateUnits(units);
+    if (currentUnits) {
+        // Set default units
+        const unitKeys = Object.keys(currentUnits);
+        selectedFromUnit = unitKeys[0];
+        selectedToUnit = unitKeys[1] || unitKeys[0];
+        
+        document.getElementById('fromUnitDisplay').textContent = 
+            `${currentUnits[selectedFromUnit].name} (${currentUnits[selectedFromUnit].symbol})`;
+        document.getElementById('toUnitDisplay').textContent = 
+            `${currentUnits[selectedToUnit].name} (${currentUnits[selectedToUnit].symbol})`;
+        
         updateConversion();
     }
     
     // Event listeners
     categorySelect.addEventListener('change', async (e) => {
         loadingDiv.style.display = 'block';
-        const units = await loadCategory(e.target.value);
+        currentUnits = await loadCategory(e.target.value);
         loadingDiv.style.display = 'none';
         
-        if (units) {
-            populateUnits(units);
+        if (currentUnits) {
+            const unitKeys = Object.keys(currentUnits);
+            selectedFromUnit = unitKeys[0];
+            selectedToUnit = unitKeys[1] || unitKeys[0];
+            
+            document.getElementById('fromUnitDisplay').textContent = 
+                `${currentUnits[selectedFromUnit].name} (${currentUnits[selectedFromUnit].symbol})`;
+            document.getElementById('toUnitDisplay').textContent = 
+                `${currentUnits[selectedToUnit].name} (${currentUnits[selectedToUnit].symbol})`;
+            
             updateConversion();
         }
     });
     
     document.getElementById('fromValue').addEventListener('input', updateConversion);
-    document.getElementById('fromUnit').addEventListener('change', updateConversion);
-    document.getElementById('toUnit').addEventListener('change', updateConversion);
     document.getElementById('swapBtn').addEventListener('click', swapUnits);
+    
+    // Unit selector buttons
+    document.getElementById('fromUnitBtn').addEventListener('click', () => openUnitModal('from'));
+    document.getElementById('toUnitBtn').addEventListener('click', () => openUnitModal('to'));
+    
+    // Modal controls
+    document.getElementById('closeModal').addEventListener('click', closeUnitModal);
+    document.getElementById('unitModal').addEventListener('click', (e) => {
+        if (e.target.id === 'unitModal') {
+            closeUnitModal();
+        }
+    });
+    
+    // Search functionality
+    document.getElementById('unitSearch').addEventListener('input', (e) => {
+        renderUnitList(e.target.value);
+    });
+    
+    // Keyboard shortcut to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeUnitModal();
+        }
+    });
 }
 
 // Start the app when page loads
