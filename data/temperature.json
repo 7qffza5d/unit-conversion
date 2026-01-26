@@ -1,0 +1,26 @@
+{
+    "celsius": {
+        "name": "Celsius Scale",
+        "symbol": "C",
+        "system": "Celsius Scale",
+        "factorNum": 1,
+        "factorDen": 1,
+        "offset": 0
+    },
+    "kelvin": {
+        "name": "Kelvin",
+        "symbol": "K",
+        "system": "Celsius Scale",
+        "factorNum": 1,
+        "factorDen": 1,
+        "offset": -273.15
+    },
+    "fahrenheit": {
+        "name": "Fahrenheit Scale",
+        "symbol": "F",
+        "system": "Fahrenheit Scale",
+        "factorNum": 5,
+        "factorDen": 9,
+        "offset": -32
+    }
+}

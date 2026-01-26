@@ -1,0 +1,14 @@
+{
+    "gram": {
+        "name": "Gram",
+        "symbol": "g",
+        "system": "Metric",
+        "factor": 1
+    },
+    "avoir_pound": {
+        "name": "(Avoirdupois) Pound",
+        "symbol": "lb",
+        "system": "US Customary",
+        "factor": 453.59237
+    }
+}

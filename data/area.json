@@ -1,0 +1,14 @@
+{
+    "squareMeter": {
+        "name": "Squared Meter",
+        "symbol": "m^2",
+        "system": "Metric",
+        "factor": 1
+    },
+    "Are": {
+        "name": "Are",
+        "symbol": "a",
+        "system": "Metric",
+        "factor": 100
+    }
+}

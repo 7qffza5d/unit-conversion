@@ -1,0 +1,14 @@
+{
+    "meter": {
+        "name": "Meter",
+        "symbol": "m",
+        "system": "Metric",
+        "factor": 1
+    },
+    "feet": {
+        "name": "Feet",
+        "symbol": "ft",
+        "system": "US Customary",
+        "factor": 0.3048
+    }
+}

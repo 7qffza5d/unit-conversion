@@ -1,0 +1,14 @@
+{
+    "cubicMeter": {
+        "name": "Cubic Meter",
+        "symbol": "m^3",
+        "system": "Metric",
+        "factor": 1
+    },
+    "Liter": {
+        "name": "Liter",
+        "symbol": "L",
+        "system": "Metric",
+        "factor": 0.001
+    }
+}
