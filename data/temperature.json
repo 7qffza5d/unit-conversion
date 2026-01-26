@@ -1,13 +1,6 @@
 {
-    "celsius": {
-        "name": "Celsius Scale",
-        "symbol": "C",
-        "system": "Celsius Scale",
-        "factorNum": 1,
-        "factorDen": 1,
-        "offset": 0
-    },
     "kelvin": {
+        "unitID": "kelvin",
         "name": "Kelvin",
         "symbol": "K",
         "system": "Celsius Scale",
@@ -15,12 +8,67 @@
         "factorDen": 1,
         "offset": 273.15
     },
+    "celsius": {
+        "unitID": "celsius",
+        "name": "Celsius Scale",
+        "symbol": "°C",
+        "system": "Celsius Scale",
+        "factorNum": 1,
+        "factorDen": 1,
+        "offset": 0
+    },
     "fahrenheit": {
+        "unitID": "fahrenheit",
         "name": "Fahrenheit Scale",
-        "symbol": "F",
+        "symbol": "°F",
         "system": "Fahrenheit Scale",
         "factorNum": 5,
         "factorDen": 9,
         "offset": 32
+    },
+    "rankine": {
+        "unitID": "rankine",
+        "name": "Rankine Scale",
+        "symbol": "°Ra",
+        "system": "Fahrenheit Scale",
+        "factorNum": 5,
+        "factorDen": 9,
+        "offset": 305.15
+    },
+    "newton": {
+        "unitID": "newton",
+        "name": "Newton Scale",
+        "symbol": "°N",
+        "system": "Newton Scale",
+        "factorNum": 33,
+        "factorDen": 100,
+        "offset": 0
+    },
+    "delisle": {
+        "unitID": "delisle",
+        "name": "Delisle Scale",
+        "symbol": "°D",
+        "system": "Delisle Scale",
+        "factorNum": -3,
+        "factorDen": 2,
+        "offset": 0
+    },
+    "reaumur": {
+        "unitID": "reaumur",
+        "name": "Réaumur Scale",
+        "symbol": "°Re",
+        "system": "Réaumur Scale",
+        "factorNum": 5,
+        "factorDen": 4,
+        "offset": 0
+    },
+    "romer": {
+        "unitID": "romer",
+        "name": "Rømer Scale",
+        "symbol": "°Rø",
+        "system": "Rømer Scale",
+        "factorNum": 40,
+        "factorDen": 21,
+        "offset": 7.5
     }
 }
