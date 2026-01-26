@@ -41,10 +41,10 @@ function convert(value, fromUnit, toUnit, units) {
     const toOffset = units[toUnit].offset || 0;
     
     // Convert to SI
-    const siValue = (value + fromOffset) * fromFactor;
+    const siValue = (value - fromOffset) * fromFactor;
     
     // Convert from SI to target
-    const result = (siValue / toFactor) - toOffset;
+    const result = (siValue / toFactor) + toOffset;
     
     return result;
 }

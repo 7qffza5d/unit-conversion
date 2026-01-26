@@ -13,7 +13,7 @@
         "system": "Celsius Scale",
         "factorNum": 1,
         "factorDen": 1,
-        "offset": -273.15
+        "offset": 273.15
     },
     "fahrenheit": {
         "name": "Fahrenheit Scale",
@@ -21,6 +21,6 @@
         "system": "Fahrenheit Scale",
         "factorNum": 5,
         "factorDen": 9,
-        "offset": -32
+        "offset": 32
     }
 }
