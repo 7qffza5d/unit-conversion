@@ -6,7 +6,7 @@
         "system": "Celsius Scale",
         "factorNum": 1,
         "factorDen": 1,
-        "offset": 273.15
+        "offset": -273.15
     },
     "celsius": {
         "unitID": "celsius",
@@ -24,7 +24,7 @@
         "system": "Fahrenheit Scale",
         "factorNum": 5,
         "factorDen": 9,
-        "offset": 32
+        "offset": -32
     },
     "rankine": {
         "unitID": "rankine",
@@ -33,7 +33,7 @@
         "system": "Fahrenheit Scale",
         "factorNum": 5,
         "factorDen": 9,
-        "offset": 491.67
+        "offset": -491.67
     },
     "newton": {
         "unitID": "newton",
@@ -51,7 +51,7 @@
         "system": "Delisle Scale",
         "factorNum": -2,
         "factorDen": 3,
-        "offset": 150
+        "offset": -150
     },
     "reaumur": {
         "unitID": "reaumur",
@@ -69,6 +69,6 @@
         "system": "Rømer Scale",
         "factorNum": 40,
         "factorDen": 21,
-        "offset": 7.5
+        "offset": -7.5
     }
 }
