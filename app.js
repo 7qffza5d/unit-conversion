@@ -8,6 +8,7 @@ let selectedToUnit = null;
 let selectedUnitForPrefix = null;
 let showingPrefixes = false;
 let prefixData = null;
+let systemData = null;
 
 // Load units from JSON file
 async function loadCategory(category) {
@@ -26,6 +27,24 @@ async function loadCategory(category) {
     } catch (error) {
         console.error('Error loading units:', error);
         alert(`Error loading ${category} units. Please check that the JSON file exists.`);
+        return null;
+    }
+}
+
+async function loadSystems() {
+    if (systemData) {
+        return systemData;
+    }
+    
+    try {
+        const response = await fetch('data/systems.json');
+        if (!response.ok) {
+            throw new Error('Failed to load systems.json');
+        }
+        systemData = await response.json();
+        return systemData;
+    } catch (error) {
+        console.error('Error loading systems:', error);
         return null;
     }
 }
@@ -82,13 +101,19 @@ function closeUnitModal() {
 }
 
 // Render unit list in modal
-function renderUnitList(searchTerm = '') {
+async function renderUnitList(searchTerm = '') {
     const unitList = document.getElementById('unitList');
-    unitList.innerHTML = '';
+    unitList.innerHTML = '<div style="text-align: center; padding: 20px;">Loading...</div>';
     
     if (!currentUnits) return;
     
+    const systems = await loadSystems();
+    unitList.innerHTML = '';
+    
     const selectedUnit = currentModalTarget === 'from' ? selectedFromUnit : selectedToUnit;
+    
+    // Group units by system
+    const unitsBySystem = {};
     
     for (const [key, unit] of Object.entries(currentUnits)) {
         // Filter by search term
@@ -97,43 +122,79 @@ function renderUnitList(searchTerm = '') {
             continue;
         }
         
-        const unitCard = document.createElement('div');
-        unitCard.className = 'unit-card';
-        if (key === selectedUnit) {
-            unitCard.classList.add('selected');
+        const system = unit.system || 'Other';
+        if (!unitsBySystem[system]) {
+            unitsBySystem[system] = [];
         }
+        unitsBySystem[system].push({ key, unit });
+    }
+    
+    // Render each system section
+    for (const [systemKey, units] of Object.entries(unitsBySystem)) {
+        const systemInfo = systems?.[systemKey] || { name: systemKey, description: '' };
         
-        const iconText = unit.symbol.length <= 3 ? unit.symbol : unit.name.charAt(0);
+        const systemSection = document.createElement('div');
+        systemSection.className = 'system-section';
         
-        unitCard.innerHTML = `
-            <div class="unit-card-header">
-                <div class="unit-icon">${iconText}</div>
-                <div class="unit-card-title">
-                    <div class="unit-name">${unit.name}</div>
-                    <div class="unit-symbol">${unit.symbol}</div>
+        const systemHeader = document.createElement('div');
+        systemHeader.className = 'system-header';
+        if (systemInfo.color) {
+            systemHeader.style.background = systemInfo.color;
+        }
+        systemHeader.innerHTML = `
+            <div class="system-name">${systemInfo.name}</div>
+            ${systemInfo.description ? `
+                <div class="system-info-icon">
+                    ?
+                    <div class="system-tooltip">${systemInfo.description}</div>
                 </div>
-            </div>
-            <button class="add-prefix-btn">+ Prefix</button>
-            ${unit.description ? `<div class="unit-info">${unit.description}</div>` : ''}
-            ${unit.system ? `<span class="unit-system">${unit.system}</span>` : ''}
+            ` : ''}
         `;
         
-        unitList.appendChild(unitCard);
+        const systemUnitsDiv = document.createElement('div');
+        systemUnitsDiv.className = 'system-units';
         
-        // Add event listeners AFTER appending to DOM
-        const prefixBtn = unitCard.querySelector('.add-prefix-btn');
-        
-        prefixBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            togglePrefixView(key);
-        });
-        
-        // Add click event for selecting the unit (on the card, not the button)
-        unitCard.addEventListener('click', (e) => {
-            if (!e.target.classList.contains('add-prefix-btn')) {
-                selectUnit(key, unit);
+        // Add units for this system
+        for (const { key, unit } of units) {
+            const unitCard = document.createElement('div');
+            unitCard.className = 'unit-card';
+            if (key === selectedUnit) {
+                unitCard.classList.add('selected');
             }
-        });
+            
+            const iconText = unit.symbol.length <= 3 ? unit.symbol : unit.name.charAt(0);
+            
+            unitCard.innerHTML = `
+                <div class="unit-card-header">
+                    <div class="unit-icon">${iconText}</div>
+                    <div class="unit-card-title">
+                        <div class="unit-name">${unit.name}</div>
+                        <div class="unit-symbol">${unit.symbol}</div>
+                    </div>
+                </div>
+                <button class="add-prefix-btn">+ Prefix</button>
+                ${unit.description ? `<div class="unit-info">${unit.description}</div>` : ''}
+            `;
+            
+            systemUnitsDiv.appendChild(unitCard);
+            
+            // Add event listeners
+            const prefixBtn = unitCard.querySelector('.add-prefix-btn');
+            prefixBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                togglePrefixView(key);
+            });
+            
+            unitCard.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('add-prefix-btn')) {
+                    selectUnit(key, unit);
+                }
+            });
+        }
+        
+        systemSection.appendChild(systemHeader);
+        systemSection.appendChild(systemUnitsDiv);
+        unitList.appendChild(systemSection);
     }
 }
 
@@ -380,6 +441,7 @@ async function init() {
     });
     
     await loadPrefixes(); // Preload prefixes
+    await loadSystems(); // Preload systems
 }
 
 // Start the app when page loads
