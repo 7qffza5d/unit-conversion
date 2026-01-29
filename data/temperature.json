@@ -33,15 +33,15 @@
         "system": "Fahrenheit Scale",
         "factorNum": 5,
         "factorDen": 9,
-        "offset": 305.15
+        "offset": 491.67
     },
     "newton": {
         "unitID": "newton",
         "name": "Newton Scale",
         "symbol": "°N",
         "system": "Newton Scale",
-        "factorNum": 33,
-        "factorDen": 100,
+        "factorNum": 100,
+        "factorDen": 33,
         "offset": 0
     },
     "delisle": {
@@ -49,9 +49,9 @@
         "name": "Delisle Scale",
         "symbol": "°D",
         "system": "Delisle Scale",
-        "factorNum": -3,
-        "factorDen": 2,
-        "offset": 0
+        "factorNum": -2,
+        "factorDen": 3,
+        "offset": 150
     },
     "reaumur": {
         "unitID": "reaumur",
