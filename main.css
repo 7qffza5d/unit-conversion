@@ -315,3 +315,78 @@ input[readonly] {
     font-weight: 500;
     margin-top: 8px;
 }
+
+.prefix-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.prefix-btn:hover {
+    background: #5568d3;
+}
+
+.prefix-modal {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+}
+
+.prefix-modal.show {
+    display: block;
+}
+
+.prefix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.prefix-option {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.prefix-option:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.prefix-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.prefix-value {
+    font-size: 12px;
+    color: #666;
+}
+
+.add-prefix-btn {
+    background: #e0e7ff;
+    color: #667eea;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 8px 0;
+    transition: all 0.2s;
+}
+
+.add-prefix-btn:hover {
+    background: #667eea;
+    color: white;
+}

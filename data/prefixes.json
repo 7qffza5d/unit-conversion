@@ -1,0 +1,102 @@
+{
+  "yotta": {
+    "symbol": "Y",
+    "factor": 1e24,
+    "name": "Yotta"
+  },
+  "zetta": {
+    "symbol": "Z",
+    "factor": 1e21,
+    "name": "Zetta"
+  },
+  "exa": {
+    "symbol": "E",
+    "factor": 1e18,
+    "name": "Exa"
+  },
+  "peta": {
+    "symbol": "P",
+    "factor": 1e15,
+    "name": "Peta"
+  },
+  "tera": {
+    "symbol": "T",
+    "factor": 1e12,
+    "name": "Tera"
+  },
+  "giga": {
+    "symbol": "G",
+    "factor": 1e9,
+    "name": "Giga"
+  },
+  "mega": {
+    "symbol": "M",
+    "factor": 1e6,
+    "name": "Mega"
+  },
+  "kilo": {
+    "symbol": "k",
+    "factor": 1e3,
+    "name": "Kilo"
+  },
+  "hecto": {
+    "symbol": "h",
+    "factor": 1e2,
+    "name": "Hecto"
+  },
+  "deca": {
+    "symbol": "da",
+    "factor": 1e1,
+    "name": "Deca"
+  },
+  "deci": {
+    "symbol": "d",
+    "factor": 1e-1,
+    "name": "Deci"
+  },
+  "centi": {
+    "symbol": "c",
+    "factor": 1e-2,
+    "name": "Centi"
+  },
+  "milli": {
+    "symbol": "m",
+    "factor": 1e-3,
+    "name": "Milli"
+  },
+  "micro": {
+    "symbol": "µ",
+    "factor": 1e-6,
+    "name": "Micro"
+  },
+  "nano": {
+    "symbol": "n",
+    "factor": 1e-9,
+    "name": "Nano"
+  },
+  "pico": {
+    "symbol": "p",
+    "factor": 1e-12,
+    "name": "Pico"
+  },
+  "femto": {
+    "symbol": "f",
+    "factor": 1e-15,
+    "name": "Femto"
+  },
+  "atto": {
+    "symbol": "a",
+    "factor": 1e-18,
+    "name": "Atto"
+  },
+  "zepto": {
+    "symbol": "z",
+    "factor": 1e-21,
+    "name": "Zepto"
+  },
+  "yocto": {
+    "symbol": "y",
+    "factor": 1e-24,
+    "name": "Yocto"
+  }
+}

@@ -1,9 +1,13 @@
 // Cache for loaded unit data
 const unitCache = {};
+const temporaryUnits = {}; // Store prefix-generated units
 let currentUnits = null;
 let currentModalTarget = null; // 'from' or 'to'
 let selectedFromUnit = null;
 let selectedToUnit = null;
+let selectedUnitForPrefix = null;
+let showingPrefixes = false;
+let prefixData = null;
 
 // Load units from JSON file
 async function loadCategory(category) {
@@ -28,23 +32,32 @@ async function loadCategory(category) {
 
 // Convert between units using factor and offset (with fraction support)
 function convert(value, fromUnit, toUnit, units) {
+    // Get unit data - either from units object or from stored selection
+    const fromUnitData = units[fromUnit] || (fromUnit === selectedFromUnit ? temporaryUnits[fromUnit] : null);
+    const toUnitData = units[toUnit] || (toUnit === selectedToUnit ? temporaryUnits[toUnit] : null);
+    
+    if (!fromUnitData || !toUnitData) {
+        console.error('Unit not found:', fromUnit, toUnit);
+        return 0;
+    }
+    
     // Get factors (support both decimal and fraction)
-    const fromFactor = units[fromUnit].factorNum ? 
-        units[fromUnit].factorNum / units[fromUnit].factorDen : 
-        units[fromUnit].factor || 1;
+    const fromFactor = fromUnitData.factorNum ? 
+        fromUnitData.factorNum / fromUnitData.factorDen : 
+        fromUnitData.factor || 1;
     
-    const toFactor = units[toUnit].factorNum ? 
-        units[toUnit].factorNum / units[toUnit].factorDen : 
-        units[toUnit].factor || 1;
+    const toFactor = toUnitData.factorNum ? 
+        toUnitData.factorNum / toUnitData.factorDen : 
+        toUnitData.factor || 1;
     
-    const fromOffset = units[fromUnit].offset || 0;
-    const toOffset = units[toUnit].offset || 0;
+    const fromOffset = fromUnitData.offset || 0;
+    const toOffset = toUnitData.offset || 0;
     
     // Convert to SI
-    const siValue = (value - fromOffset) * fromFactor;
+    const siValue = (value + fromOffset) * fromFactor;
     
     // Convert from SI to target
-    const result = (siValue / toFactor) + toOffset;
+    const result = (siValue / toFactor) - toOffset;
     
     return result;
 }
@@ -90,7 +103,6 @@ function renderUnitList(searchTerm = '') {
             unitCard.classList.add('selected');
         }
         
-        // Create unit icon with first letter or symbol
         const iconText = unit.symbol.length <= 3 ? unit.symbol : unit.name.charAt(0);
         
         unitCard.innerHTML = `
@@ -101,12 +113,27 @@ function renderUnitList(searchTerm = '') {
                     <div class="unit-symbol">${unit.symbol}</div>
                 </div>
             </div>
+            <button class="add-prefix-btn">+ Prefix</button>
             ${unit.description ? `<div class="unit-info">${unit.description}</div>` : ''}
             ${unit.system ? `<span class="unit-system">${unit.system}</span>` : ''}
         `;
         
-        unitCard.addEventListener('click', () => selectUnit(key, unit));
         unitList.appendChild(unitCard);
+        
+        // Add event listeners AFTER appending to DOM
+        const prefixBtn = unitCard.querySelector('.add-prefix-btn');
+        
+        prefixBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            togglePrefixView(key);
+        });
+        
+        // Add click event for selecting the unit (on the card, not the button)
+        unitCard.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('add-prefix-btn')) {
+                selectUnit(key, unit);
+            }
+        });
     }
 }
 
@@ -130,19 +157,22 @@ function updateConversion() {
     const toValueInput = document.getElementById('toValue');
     const resultDiv = document.getElementById('result');
     
-    if (!currentUnits || isNaN(fromValue) || !selectedFromUnit || !selectedToUnit) {
+    if (isNaN(fromValue) || !selectedFromUnit || !selectedToUnit) {
         toValueInput.value = '';
         resultDiv.classList.remove('show');
         return;
     }
     
-    const result = convert(fromValue, selectedFromUnit, selectedToUnit, currentUnits);
+    // Combine current units with temporary units
+    const allUnits = { ...currentUnits, ...temporaryUnits };
+    
+    const result = convert(fromValue, selectedFromUnit, selectedToUnit, allUnits);
     const formattedResult = result.toFixed(6).replace(/\.?0+$/, '');
     
     toValueInput.value = formattedResult;
     
-    const fromUnitData = currentUnits[selectedFromUnit];
-    const toUnitData = currentUnits[selectedToUnit];
+    const fromUnitData = allUnits[selectedFromUnit];
+    const toUnitData = allUnits[selectedToUnit];
     
     resultDiv.textContent = `${fromValue} ${fromUnitData.symbol} = ${formattedResult} ${toUnitData.symbol}`;
     resultDiv.classList.add('show');
@@ -171,6 +201,111 @@ function swapUnits() {
     updateConversion();
 }
 
+// Load prefixes from JSON
+async function loadPrefixes() {
+    if (prefixData) {
+        return prefixData;
+    }
+    
+    try {
+        const response = await fetch('data/prefixes.json');
+        if (!response.ok) {
+            throw new Error('Failed to load prefixes.json');
+        }
+        prefixData = await response.json();
+        return prefixData;
+    } catch (error) {
+        console.error('Error loading prefixes:', error);
+        alert('Error loading prefixes. Please check that prefixes.json exists.');
+        return null;
+    }
+}
+
+// Toggle prefix selection view
+function togglePrefixView(unitKey) { 
+    const prefixModal = document.getElementById('prefixModal');
+    const unitList = document.getElementById('unitList');
+    
+    if (showingPrefixes && selectedUnitForPrefix === unitKey) {
+        // Hide prefix view
+        prefixModal.classList.remove('show');
+        unitList.style.display = 'grid';
+        showingPrefixes = false;
+        selectedUnitForPrefix = null;
+    } else {
+        // Show prefix view
+        selectedUnitForPrefix = unitKey;
+        showingPrefixes = true;
+        renderPrefixOptions(unitKey);
+        prefixModal.classList.add('show');
+        unitList.style.display = 'none';
+    }
+}
+
+// Render prefix options
+async function renderPrefixOptions(unitKey) {
+    const unit = currentUnits[unitKey];
+    const prefixGrid = document.getElementById('prefixGrid');
+    prefixGrid.innerHTML = '<div style="text-align: center; padding: 20px;">Loading prefixes...</div>';
+    
+    const prefixes = await loadPrefixes();
+    if (!prefixes) return;
+    
+    prefixGrid.innerHTML = '';
+    
+    for (const [prefixKey, prefix] of Object.entries(prefixes)) {
+        const prefixOption = document.createElement('div');
+        prefixOption.className = 'prefix-option';
+        
+        prefixOption.innerHTML = `
+            <div class="prefix-name">${prefix.symbol}</div>
+            <div class="prefix-value">${prefix.name}</div>
+        `;
+        
+        prefixOption.addEventListener('click', () => {
+            applyPrefix(unitKey, prefix.name, prefix);
+        });
+        
+        prefixGrid.appendChild(prefixOption);
+    }
+}
+
+// Apply prefix to unit
+function applyPrefix(unitKey, prefixName, prefix) {
+    const unit = currentUnits[unitKey];
+    
+    const newUnitKey = unitKey + '_' + prefixName;
+    
+    // Create new unit with prefix applied
+    const newUnit = {
+        factor: unit.factor * prefix.factor,
+        offset: unit.offset || 0,
+        symbol: prefix.symbol + unit.symbol,
+        name: prefixName + unit.name.toLowerCase(),
+        system: unit.system,
+        description: `${prefix.factor} ${unit.name.toLowerCase()}s`
+    };
+    
+    // Handle fractional factors
+    if (unit.factorNum && unit.factorDen) {
+        newUnit.factorNum = unit.factorNum * prefix.factor;
+        newUnit.factorDen = unit.factorDen;
+        delete newUnit.factor;
+    }
+    
+    // Store in temporary units
+    temporaryUnits[newUnitKey] = newUnit;
+    
+    // Select this new unit
+    selectUnit(newUnitKey, newUnit);
+    
+    // Hide prefix view
+    const prefixModal = document.getElementById('prefixModal');
+    prefixModal.classList.remove('show');
+    document.getElementById('unitList').style.display = 'grid';
+    showingPrefixes = false;
+}
+
 // Initialize app
 async function init() {
     const categorySelect = document.getElementById('category');
@@ -194,6 +329,8 @@ async function init() {
         
         updateConversion();
     }
+
+    
     
     // Event listeners
     categorySelect.addEventListener('change', async (e) => {
@@ -241,6 +378,8 @@ async function init() {
             closeUnitModal();
         }
     });
+    
+    await loadPrefixes(); // Preload prefixes
 }
 
 // Start the app when page loads
