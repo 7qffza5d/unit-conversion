@@ -4,9 +4,9 @@
     "description": "International System of Units (SI)",
     "color": "#667eea"
   },
-  "Imperial": {
-    "name": "Imperial",
-    "description": "Traditional units used in the United States",
-    "color": "#764ba2"
+  "Celsius Scale": {
+    "name": "Celsius Scale",
+    "description": "",
+    "color": "#667eea"
   }
 }

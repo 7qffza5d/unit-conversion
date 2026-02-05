@@ -322,6 +322,55 @@ input[readonly] {
     gap: 12px;
 }
 
+.system-header {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.system-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.system-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.collapse-icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.collapse-icon.collapsed {
+    transform: rotate(-90deg);
+}
+
+.system-units {
+    display: grid;
+    gap: 12px;
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.system-units.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+}
+
 .unit-card {
     padding: 16px;
     border: 2px solid #e0e0e0;

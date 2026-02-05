@@ -142,7 +142,10 @@ async function renderUnitList(searchTerm = '') {
             systemHeader.style.background = systemInfo.color;
         }
         systemHeader.innerHTML = `
-            <div class="system-name">${systemInfo.name}</div>
+            <div class="system-header-left">
+                <span class="collapse-icon">▼</span>
+                <div class="system-name">${systemInfo.name}</div>
+            </div>
             ${systemInfo.description ? `
                 <div class="system-info-icon">
                     ?
@@ -150,6 +153,18 @@ async function renderUnitList(searchTerm = '') {
                 </div>
             ` : ''}
         `;
+
+        // Add click handler for collapsing
+        systemHeader.addEventListener('click', (e) => {
+            // Don't collapse if clicking the info icon
+            if (e.target.closest('.system-info-icon')) {
+                return;
+            }
+    
+            const collapseIcon = systemHeader.querySelector('.collapse-icon');
+            systemUnitsDiv.classList.toggle('collapsed');
+            collapseIcon.classList.toggle('collapsed');
+        });
         
         const systemUnitsDiv = document.createElement('div');
         systemUnitsDiv.className = 'system-units';
