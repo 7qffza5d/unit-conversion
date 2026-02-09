@@ -1,14 +1,667 @@
 {
-    "squareMeter": {
-        "name": "Squared Meter",
-        "symbol": "m^2",
+    "meter_squared": {
+        "unitID": "meter_squared",
+        "name": "Square Meter",
+        "symbol": "m²",
         "system": "Metric",
         "factor": 1
     },
-    "Are": {
+    "are": {
+        "unitID": "are",
         "name": "Are",
         "symbol": "a",
         "system": "Metric",
         "factor": 100
+    },
+    "square_foot_US": {
+        "unitID": "square_foot_US",
+        "name": "Square Foot",
+        "symbol": "sq ft",
+        "system": "US Customary",
+        "factor": 0.09290304
+    },
+    "square_yard_US": {
+        "unitID": "square_yard_US",
+        "name": "Square Yard",
+        "symbol": "sq yd",
+        "system": "US Customary",
+        "factor": 0.8361273600000001
+    },
+    "square_chain_US": {
+        "unitID": "square_chain_US",
+        "name": "Square Chain",
+        "symbol": "sq ch",
+        "system": "US Customary",
+        "factor": 404.68564224000005
+    },
+    "acreUS": {
+        "unitID": "acreUS",
+        "name": "Acre",
+        "symbol": "acre",
+        "system": "US Customary",
+        "factor": 4046.8564224000006
+    },
+    "tarang_wa_TH": {
+        "unitID": "tarang_wa_TH",
+        "name": "Tarang Wa (ตารางวา)",
+        "system": "Thai",
+        "factor": 4
+    },
+    "nganTH": {
+        "unitID": "nganTH",
+        "name": "Ngan (งาน)",
+        "system": "Thai",
+        "factor": 400
+    },
+    "raiTH": {
+        "unitID": "raiTH",
+        "name": "Rai (ไร่)",
+        "system": "Thai",
+        "factor": 1600
+    },
+    "jareebAF": {
+        "unitID": "jareebAF",
+        "name": "Jareeb",
+        "system": "Afghan",
+        "factor": 2000
+    },
+    "arpentBE": {
+        "unitID": "arpentBE",
+        "name": "Arpent",
+        "system": "Belgian",
+        "factor": 1306000
+    },
+    "hideCN": {
+        "unitID": "hideCN",
+        "name": "Qǐng",
+        "symbol": "顷",
+        "system": "Chinese",
+        "factor": 66666.6
+    },
+    "acreCN": {
+        "unitID": "acreCN",
+        "name": "Mǔ",
+        "symbol": "亩",
+        "system": "Chinese",
+        "factor": 666.666
+    },
+    "fenCN": {
+        "unitID": "fenCN",
+        "name": "Fēn",
+        "symbol": "市分 ",
+        "system": "Chinese",
+        "factor": 66.6666
+    },
+    "liCN": {
+        "unitID": "liCN",
+        "name": "Lí",
+        "symbol": "厘",
+        "system": "Chinese",
+        "factor": 6.66666
+    },
+    "haoCN": {
+        "unitID": "haoCN",
+        "name": "Háo",
+        "symbol": "毫",
+        "system": "Chinese",
+        "factor": 0.6666660000000001
+    },
+    "mericeCZ": {
+        "unitID": "mericeCZ",
+        "name": "Měřice ",
+        "system": "Czech",
+        "factor": 1999
+    },
+    "korecCZ": {
+        "unitID": "korecCZ",
+        "name": "Korec",
+        "system": "Czech",
+        "factor": 2878
+    },
+    "jitroCZ": {
+        "unitID": "jitroCZ",
+        "name": "Jitro",
+        "system": "Czech",
+        "factor": 5756
+    },
+    "lanCZ": {
+        "unitID": "lanCZ",
+        "name": "Lán ",
+        "system": "Czech",
+        "factor": 172680
+    },
+    "morgenNL": {
+        "unitID": "morgenNL",
+        "name": "Morgen",
+        "system": "Dutch",
+        "factor": 8516
+    },
+    "hontNL": {
+        "unitID": "hontNL",
+        "name": "Hont",
+        "system": "Dutch",
+        "factor": 14190
+    },
+    "rodaNL": {
+        "unitID": "rodaNL",
+        "name": "Roede",
+        "system": "Dutch",
+        "factor": 14.19
+    },
+    "footaNL": {
+        "unitID": "footaNL",
+        "name": "Voet",
+        "system": "Dutch",
+        "factor": 0.098596
+    },
+    "sahmeEG": {
+        "unitID": "sahmeEG",
+        "name": "Sahme",
+        "system": "Egyptian",
+        "factor": 7.293055555555556
+    },
+    "kiratkamelEG": {
+        "unitID": "kiratkamelEG",
+        "name": "Kirat Kamel",
+        "system": "Egyptian",
+        "factor": 175.03333333333333
+    },
+    "feddanmasriEG": {
+        "unitID": "feddanmasriEG",
+        "name": "Feddan Masri",
+        "system": "Egyptian",
+        "factor": 4200.8
+    },
+    "sqrodEN": {
+        "unitID": "sqrodEN",
+        "name": "Square Rod",
+        "system": "English",
+        "factor": 25.29
+    },
+    "roodEN": {
+        "unitID": "roodEN",
+        "name": "Rood",
+        "system": "English",
+        "factor": 1012
+    },
+    "acreEN": {
+        "unitID": "acreEN",
+        "name": "Acre",
+        "system": "English",
+        "factor": 4047
+    },
+    "oxgangEN": {
+        "unitID": "oxgangEN",
+        "name": "Bovate",
+        "system": "English",
+        "factor": 60000
+    },
+    "virgateEN": {
+        "unitID": "virgateEN",
+        "name": "Virgate",
+        "system": "English",
+        "factor": 120000
+    },
+    "carucateEN": {
+        "unitID": "carucateEN",
+        "name": "Carucate",
+        "system": "English",
+        "factor": 490000
+    },
+    "lofstelleES": {
+        "unitID": "lofstelleES",
+        "name": "Lofstelle",
+        "system": "Estonian",
+        "factor": 1855
+    },
+    "tonnlandES": {
+        "unitID": "tonnlandES",
+        "name": "Tonnland",
+        "system": "Estonian",
+        "factor": 5462.7
+    },
+    "kannlandFI": {
+        "unitID": "kannlandFI",
+        "name": "Kannunala",
+        "system": "Finnish",
+        "factor": 88.14964285714287
+    },
+    "kapplandFI": {
+        "unitID": "kapplandFI",
+        "name": "Kapanala",
+        "system": "Finnish",
+        "factor": 154.261875
+    },
+    "spannlandFI": {
+        "unitID": "spannlandFI",
+        "name": "Panninala",
+        "system": "Finnish",
+        "factor": 2468.19
+    },
+    "tunnlandFI": {
+        "unitID": "tunnlandFI",
+        "name": "Tynnyrinala",
+        "system": "Finnish",
+        "factor": 4936.38
+    },
+    "sqfootFR": {
+        "unitID": "sqfootFR",
+        "name": "Pied carré",
+        "system": "French",
+        "factor": 0.10552777777777778
+    },
+    "sqfathomFR": {
+        "unitID": "sqfathomFR",
+        "name": "Toise carrée",
+        "system": "French",
+        "factor": 3.799
+    },
+    "sqperchFR": {
+        "unitID": "sqperchFR",
+        "name": "Perche d'arpent carrée",
+        "system": "French",
+        "factor": 51.07
+    },
+    "vergeeFR": {
+        "unitID": "vergeeFR",
+        "name": "Vergée",
+        "system": "French",
+        "factor": 1277
+    },
+    "acreFR": {
+        "unitID": "acreFR",
+        "name": "Acre",
+        "system": "French",
+        "factor": 5107
+    },
+    "sqfootAG": {
+        "unitID": "sqfootAG",
+        "name": "πούς",
+        "system": "Ancient Greek",
+        "factor": 0.095
+    },
+    "hexasqfootAG": {
+        "unitID": "hexasqfootAG",
+        "name": "ἑξαπόδης",
+        "system": "Ancient Greek",
+        "factor": 3.42
+    },
+    "rodAG": {
+        "unitID": "rodAG",
+        "name": "ἄκαινα",
+        "system": "Ancient Greek",
+        "factor": 9.5
+    },
+    "fieldAG": {
+        "unitID": "fieldAG",
+        "name": "ἄρουρα",
+        "system": "Ancient Greek",
+        "factor": 237.5
+    },
+    "sqfootBZ": {
+        "unitID": "sqfootBZ",
+        "name": "ποῦς",
+        "system": "Byzantine",
+        "factor": 0.095
+    },
+    "acreBZ": {
+        "unitID": "acreBZ",
+        "name": "στρέμμα",
+        "system": "Byzantine",
+        "factor": 991
+    },
+    "modionBZ": {
+        "unitID": "modionBZ",
+        "name": "μόδιος",
+        "system": "Byzantine",
+        "factor": 2973
+    },
+    "carreauHT": {
+        "unitID": "carreauHT",
+        "name": "Carreau",
+        "system": "Haitian",
+        "factor": 1292.3
+    },
+    "yokeHE": {
+        "unitID": "yokeHE",
+        "name": "צמד ",
+        "system": "Hebrew",
+        "factor": 1790.1347327999997
+    },
+    "holdHU": {
+        "unitID": "holdHU",
+        "name": "Hold",
+        "system": "Hungarian",
+        "factor": 4316
+    },
+    "bahoeID": {
+        "unitID": "bahoeID",
+        "name": "Bahoe",
+        "system": "Indonesian",
+        "factor": 7096.5
+    },
+    "threecowsIR": {
+        "unitID": "threecowsIR",
+        "name": "Tir-cumaile",
+        "system": "Irish",
+        "factor": 93000
+    },
+    "acreIR": {
+        "unitID": "acreIR",
+        "name": "Achar",
+        "system": "Irish",
+        "factor": 277.77777777777777
+    },
+    "ploughIR": {
+        "unitID": "ploughIR",
+        "name": "Seisrech",
+        "system": "Irish",
+        "factor": 3333.3333333333335
+    },
+    "townIR": {
+        "unitID": "townIR",
+        "name": "Baile",
+        "system": "Irish",
+        "factor": 40000
+    },
+    "tuathIR": {
+        "unitID": "tuathIR",
+        "name": "Tuath",
+        "system": "Irish",
+        "factor": 120000
+    },
+    "shakuJP": {
+        "unitID": "shakuJP",
+        "name": "Shaku",
+        "symbol": "勺",
+        "system": "Japanese",
+        "factor": 0.03306
+    },
+    "goJP": {
+        "unitID": "goJP",
+        "name": "Gō",
+        "symbol": "合",
+        "system": "Japanese",
+        "factor": 0.3306
+    },
+    "joaJP": {
+        "unitID": "joaJP",
+        "name": "Jō ",
+        "symbol": "畳 ",
+        "system": "Japanese",
+        "factor": 1.653
+    },
+    "tsuboJP": {
+        "unitID": "tsuboJP",
+        "name": "Tsubo",
+        "symbol": "坪",
+        "system": "Japanese",
+        "factor": 3.306
+    },
+    "buJP": {
+        "unitID": "buJP",
+        "name": "Bu",
+        "symbol": "歩",
+        "system": "Japanese",
+        "factor": 3.306
+    },
+    "seJP": {
+        "unitID": "seJP",
+        "name": "Seisrech",
+        "symbol": "畝",
+        "system": "Japanese",
+        "factor": 99.18
+    },
+    "tanJP": {
+        "unitID": "tanJP",
+        "name": "Tan",
+        "symbol": "反",
+        "system": "Japanese",
+        "factor": 991.8000000000001
+    },
+    "chobuJP": {
+        "unitID": "chobuJP",
+        "name": "Chō(bu)",
+        "symbol": "町(歩)",
+        "system": "Japanese",
+        "factor": 9918
+    },
+    "pyeongKO": {
+        "unitID": "pyeongKO",
+        "name": "Pyeong",
+        "symbol": "평",
+        "system": "Korean",
+        "factor": 3.3058
+    },
+    "sqpikLY": {
+        "unitID": "sqpikLY",
+        "name": "Pik²",
+        "system": "Libyan",
+        "factor": 0.4624
+    },
+    "denumLY": {
+        "unitID": "denumLY",
+        "name": "Denum",
+        "system": "Libyan",
+        "factor": 739.8399999999999
+    },
+    "jabiaLY": {
+        "unitID": "jabiaLY",
+        "name": "Jabia",
+        "system": "Libyan",
+        "factor": 832.3199999999999
+    },
+    "kejlaMT": {
+        "unitID": "kejlaMT",
+        "name": "Kejla",
+        "system": "Maltese",
+        "factor": 18.733333333333334
+    },
+    "sieghMT": {
+        "unitID": "sieghMT",
+        "name": "Siegħ",
+        "system": "Maltese",
+        "factor": 187.33333333333334
+    },
+    "tomnaMT": {
+        "unitID": "tomnaMT",
+        "name": "Tomna",
+        "system": "Maltese",
+        "factor": 1124
+    },
+    "wejbaMT": {
+        "unitID": "wejbaMT",
+        "name": "Wejba",
+        "system": "Maltese",
+        "factor": 4496
+    },
+    "moddMT": {
+        "unitID": "moddMT",
+        "name": "Modd",
+        "system": "Maltese",
+        "factor": 17984
+    },
+    "shekelSUX": {
+        "unitID": "shekelSUX",
+        "name": "gin2",
+        "symbol": "𒂆",
+        "system": "Mesopotamian",
+        "factor": 0.25
+    },
+    "gardenSUX": {
+        "unitID": "gardenSUX",
+        "name": "sar",
+        "symbol": "𒊬",
+        "system": "Mesopotamian",
+        "factor": 36
+    },
+    "fieldSUX": {
+        "unitID": "fieldSUX",
+        "name": "iku",
+        "symbol": "𒃷",
+        "system": "Mesopotamian",
+        "factor": 3600
+    },
+    "estateSUX": {
+        "unitID": "estateSUX",
+        "name": "bur",
+        "symbol": "𒁓",
+        "system": "Mesopotamian",
+        "factor": 64800
+    },
+    "decareNO": {
+        "unitID": "decareNO",
+        "name": "Mål",
+        "system": "Norwegian",
+        "factor": 984
+    },
+    "sqstangNO": {
+        "unitID": "sqstangNO",
+        "name": "Kvadrat rode",
+        "system": "Norwegian",
+        "factor": 9.84
+    },
+    "barrellandNO": {
+        "unitID": "barrellandNO",
+        "name": "tønneland ",
+        "system": "Norwegian",
+        "factor": 3936
+    },
+    "sqfootLA": {
+        "unitID": "sqfootLA",
+        "name": "Pes Quadratus",
+        "system": "Roman",
+        "factor": 0.0876
+    },
+    "scrupulumLA": {
+        "unitID": "scrupulumLA",
+        "name": "Scrupulum",
+        "system": "Roman",
+        "factor": 8.76
+    },
+    "jugerumLA": {
+        "unitID": "jugerumLA",
+        "name": "Jugerum",
+        "system": "Roman",
+        "factor": 2523
+    },
+    "centuriaLA": {
+        "unitID": "centuriaLA",
+        "name": "Centuria",
+        "system": "Roman",
+        "factor": 504700
+    },
+    "feredelaRO": {
+        "unitID": "feredelaRO",
+        "name": "Feredelă",
+        "system": "Romanian",
+        "factor": 1.25
+    },
+    "stanjenpatratRO": {
+        "unitID": "stanjenpatratRO",
+        "name": "Stânjen pătrat",
+        "system": "Romanian",
+        "factor": 3.59665
+    },
+    "pogonRO": {
+        "unitID": "pogonRO",
+        "name": "Pogon",
+        "system": "Romanian",
+        "factor": 5
+    },
+    "falceRO": {
+        "unitID": "falceRO",
+        "name": "Falce",
+        "system": "Romanian",
+        "factor": 14.3
+    },
+    "prajinaRO": {
+        "unitID": "prajinaRO",
+        "name": "Prăjină",
+        "system": "Romanian",
+        "factor": 195
+    },
+    "lugarRO": {
+        "unitID": "lugarRO",
+        "name": "Lugăr",
+        "system": "Romanian",
+        "factor": 5700
+    },
+    "hectareRU": {
+        "unitID": "hectareRU",
+        "name": "десяти́на",
+        "system": "Russian",
+        "factor": 100000
+    },
+    "daratSO": {
+        "unitID": "daratSO",
+        "name": "Darat",
+        "system": "Somalian",
+        "factor": 8000
+    },
+    "kannlandSV": {
+        "unitID": "kannlandSV",
+        "name": "Kannaland",
+        "system": "Swedish",
+        "factor": 88.15
+    },
+    "kapplandSV": {
+        "unitID": "kapplandSV",
+        "name": "Kappland",
+        "system": "Swedish",
+        "factor": 154.3
+    },
+    "spannlandSV": {
+        "unitID": "spannlandSV",
+        "name": "Spannland",
+        "system": "Swedish",
+        "factor": 2468.8
+    },
+    "tunnlandSV": {
+        "unitID": "tunnlandSV",
+        "name": "Tunnland",
+        "system": "Swedish",
+        "factor": 4937.6
+    },
+    "arpentCH": {
+        "unitID": "arpentCH",
+        "name": "Arpent",
+        "system": "Swiss",
+        "factor": 144000
+    },
+    "penTW": {
+        "unitID": "penTW",
+        "name": "Pêⁿ",
+        "symbol": "坪",
+        "system": "Taiwanese",
+        "factor": 3.306
+    },
+    "boTW": {
+        "unitID": "boTW",
+        "name": "Bó͘",
+        "symbol": "畝",
+        "system": "Taiwanese",
+        "factor": 99.18
+    },
+    "hunaTW": {
+        "unitID": "hunaTW",
+        "name": "Hun",
+        "symbol": "分",
+        "system": "Taiwanese",
+        "factor": 969.9803999999999
+    },
+    "kahTW": {
+        "unitID": "kahTW",
+        "name": "Kah",
+        "symbol": "甲",
+        "system": "Taiwanese",
+        "factor": 9699.804
+    },
+    "leTW": {
+        "unitID": "leTW",
+        "name": "Lê",
+        "symbol": "犁",
+        "system": "Taiwanese",
+        "factor": 48499.020000000004
     }
 }
