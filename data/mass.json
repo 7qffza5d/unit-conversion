@@ -1,14 +1,1787 @@
 {
     "gram": {
+        "unitID": "gram",
         "name": "Gram",
         "symbol": "g",
         "system": "Metric",
         "factor": 1
     },
-    "avoir_pound": {
-        "name": "(Avoirdupois) Pound",
+    "grainAV": {
+        "unitID": "grainAV",
+        "name": "Grain",
+        "symbol": "gr",
+        "system": "US Avoirdupois",
+        "factor": 0.06479891
+    },
+    "dramAV": {
+        "unitID": "dramAV",
+        "name": "Dram",
+        "symbol": "dr",
+        "system": "US Avoirdupois",
+        "factor": 1.771845195
+    },
+    "ounceAV": {
+        "unitID": "ounceAV",
+        "name": "Ounce",
+        "symbol": "oz",
+        "system": "US Avoirdupois",
+        "factor": 28.34952312
+    },
+    "poundAV": {
+        "unitID": "poundAV",
+        "name": "Pound",
         "symbol": "lb",
-        "system": "US Customary",
-        "factor": 453.59237
+        "system": "US Avoirdupois",
+        "factor": 453.59236992
+    },
+    "cwtUS": {
+        "unitID": "cwtUS",
+        "name": "Short hundredweight",
+        "symbol": "US cwt",
+        "system": "US Avoirdupois",
+        "factor": 45359.236992
+    },
+    "cwtL": {
+        "unitID": "cwtL",
+        "name": "Long hundredweight",
+        "symbol": "cwt",
+        "system": "US Avoirdupois",
+        "factor": 50802.34543104
+    },
+    "tonUS": {
+        "unitID": "tonUS",
+        "name": "Short ton",
+        "symbol": "short ton",
+        "system": "US Avoirdupois",
+        "factor": 907184.7398399999
+    },
+    "ton": {
+        "unitID": "ton",
+        "name": "Long ton",
+        "symbol": "ton",
+        "system": "US Avoirdupois",
+        "factor": 1016046.9086207999
+    },
+    "grainTR": {
+        "unitID": "grainTR",
+        "name": "Grain",
+        "symbol": "gr",
+        "system": "US Troy",
+        "factor": 0.06479891
+    },
+    "pennyweight": {
+        "unitID": "pennyweight",
+        "name": "Pennyweight",
+        "symbol": "dwt",
+        "system": "US Troy",
+        "factor": 1.55517384
+    },
+    "ounceTR": {
+        "unitID": "ounceTR",
+        "name": "Ounce",
+        "symbol": "ozt",
+        "system": "US Troy",
+        "factor": 31.1034768
+    },
+    "poundTR": {
+        "unitID": "poundTR",
+        "name": "Pound",
+        "symbol": "lbt",
+        "system": "US Troy",
+        "factor": 373.2417216
+    },
+    "saluengTH": {
+        "unitID": "saluengTH",
+        "name": "Salueng (สลึง)",
+        "system": "Thai",
+        "factor": 3.75
+    },
+    "bahtTH": {
+        "unitID": "bahtTH",
+        "name": "Baht (บาท)",
+        "system": "Thai",
+        "factor": 15
+    },
+    "tamluengTH": {
+        "unitID": "tamluengTH",
+        "name": "Tamlueng (ตำลึง)",
+        "system": "Thai",
+        "factor": 60
+    },
+    "changTH": {
+        "unitID": "changTH",
+        "name": "Chang (ชั่ง)",
+        "system": "Thai",
+        "factor": 1200
+    },
+    "hapTH": {
+        "unitID": "hapTH",
+        "name": "Hap (หาบ)",
+        "system": "Thai",
+        "factor": 60000
+    },
+    "nakhudAF": {
+        "unitID": "nakhudAF",
+        "name": "Nakhud",
+        "system": "Afghan",
+        "factor": 0.19
+    },
+    "misqalAF": {
+        "unitID": "misqalAF",
+        "name": "Misqal",
+        "system": "Afghan",
+        "factor": 4.4
+    },
+    "khurdAF": {
+        "unitID": "khurdAF",
+        "name": "Khurd",
+        "system": "Afghan",
+        "factor": 110.4
+    },
+    "paoAF": {
+        "unitID": "paoAF",
+        "name": "Pao",
+        "system": "Afghan",
+        "factor": 441.6
+    },
+    "charakAF": {
+        "unitID": "charakAF",
+        "name": "Charak",
+        "system": "Afghan",
+        "factor": 1766.4
+    },
+    "seerAF": {
+        "unitID": "seerAF",
+        "name": "Seer",
+        "system": "Afghan",
+        "factor": 7066
+    },
+    "manAF": {
+        "unitID": "manAF",
+        "name": "Man",
+        "system": "Afghan",
+        "factor": 5652.8
+    },
+    "kharwarAF": {
+        "unitID": "kharwarAF",
+        "name": "Kharwar",
+        "system": "Afghan",
+        "factor": 565280
+    },
+    "ounceDZ": {
+        "unitID": "ounceDZ",
+        "name": "Ukkia",
+        "system": "Algerian",
+        "factor": 0.03413
+    },
+    "rottharyDZ": {
+        "unitID": "rottharyDZ",
+        "name": "Rottolo à thary",
+        "system": "Algerian",
+        "factor": 0.54608
+    },
+    "rotkhadDZ": {
+        "unitID": "rotkhadDZ",
+        "name": "Rottolo à khadhary",
+        "system": "Algerian",
+        "factor": 0.61434
+    },
+    "rotkebyrDZ": {
+        "unitID": "rotkebyrDZ",
+        "name": "Rottolo à kebyr",
+        "system": "Algerian",
+        "factor": 0.8191200000000001
+    },
+    "cantharyDZ": {
+        "unitID": "cantharyDZ",
+        "name": "Cantar à thary",
+        "system": "Algerian",
+        "factor": 54.608000000000004
+    },
+    "cankhadDZ": {
+        "unitID": "cankhadDZ",
+        "name": "Cantar à khadhary",
+        "system": "Algerian",
+        "factor": 61.434
+    },
+    "cankebyrDZ": {
+        "unitID": "cankebyrDZ",
+        "name": "Cantar à kebyr",
+        "system": "Algerian",
+        "factor": 81.912
+    },
+    "gyralDZ": {
+        "unitID": "gyralDZ",
+        "name": "Gyral",
+        "system": "Algerian",
+        "factor": 0.207
+    },
+    "uqiyyahAR": {
+        "unitID": "uqiyyahAR",
+        "name": "Uqiyyah",
+        "symbol": "أُوقِيَّة",
+        "system": "Arabic",
+        "factor": 128.3
+    },
+    "dirhamAR": {
+        "unitID": "dirhamAR",
+        "name": "Dirham",
+        "system": "Arabic",
+        "factor": 3.2075000000000005
+    },
+    "dinarAR": {
+        "unitID": "dinarAR",
+        "name": "Dinar",
+        "system": "Arabic",
+        "factor": 2.24525
+    },
+    "grainARG": {
+        "unitID": "grainARG",
+        "name": "Grano",
+        "symbol": "gr",
+        "system": "Argentine",
+        "factor": 0.04984809027777778
+    },
+    "dramARG": {
+        "unitID": "dramARG",
+        "name": "Adarme",
+        "symbol": "dr",
+        "system": "Argentine",
+        "factor": 1.79453125
+    },
+    "ounceARG": {
+        "unitID": "ounceARG",
+        "name": "Onza",
+        "symbol": "oz",
+        "system": "Argentine",
+        "factor": 28.7125
+    },
+    "poundARG": {
+        "unitID": "poundARG",
+        "name": "Libra",
+        "symbol": "lb",
+        "system": "Argentine",
+        "factor": 459.4
+    },
+    "arrobaARG": {
+        "unitID": "arrobaARG",
+        "name": "Arroba",
+        "symbol": "ar",
+        "system": "Argentine",
+        "factor": 11485
+    },
+    "hundredwtARG": {
+        "unitID": "hundredwtARG",
+        "name": "Quintal",
+        "symbol": "qu",
+        "system": "Argentine",
+        "factor": 45940
+    },
+    "tonARG": {
+        "unitID": "tonARG",
+        "name": "Tonelada",
+        "symbol": "ton",
+        "system": "Argentine",
+        "factor": 918800
+    },
+    "marcoARG": {
+        "unitID": "marcoARG",
+        "name": "Marco",
+        "system": "Argentine",
+        "factor": 176.68157118055555
+    },
+    "lothBE": {
+        "unitID": "lothBE",
+        "name": "Loth",
+        "system": "Belgian",
+        "factor": 15.296875
+    },
+    "ounceBE": {
+        "unitID": "ounceBE",
+        "name": "Once",
+        "system": "Belgian",
+        "factor": 30.59375
+    },
+    "marcBE": {
+        "unitID": "marcBE",
+        "name": "Marc",
+        "system": "Belgian",
+        "factor": 244.75
+    },
+    "livreBE": {
+        "unitID": "livreBE",
+        "name": "Livre",
+        "system": "Belgian",
+        "factor": 489.5
+    },
+    "steinBE": {
+        "unitID": "steinBE",
+        "name": "Stein",
+        "system": "Belgian",
+        "factor": 3916
+    },
+    "quintalBE": {
+        "unitID": "quintalBE",
+        "name": "Quintal",
+        "system": "Belgian",
+        "factor": 48950
+    },
+    "chariotBE": {
+        "unitID": "chariotBE",
+        "name": "Chariot",
+        "system": "Belgian",
+        "factor": 80767.5
+    },
+    "balleBE": {
+        "unitID": "balleBE",
+        "name": "Balle",
+        "system": "Belgian",
+        "factor": 97900
+    },
+    "schiffpfundBE": {
+        "unitID": "schiffpfundBE",
+        "name": "Schiffpfund",
+        "system": "Belgian",
+        "factor": 146850
+    },
+    "chargeBE": {
+        "unitID": "chargeBE",
+        "name": "Charge",
+        "system": "Belgian",
+        "factor": 195800
+    },
+    "ounceBR": {
+        "unitID": "ounceBR",
+        "name": "Onça ",
+        "system": "Brazilian",
+        "factor": 28.690625
+    },
+    "poundBR": {
+        "unitID": "poundBR",
+        "name": "Libra",
+        "system": "Brazilian",
+        "factor": 459.05
+    },
+    "markBR": {
+        "unitID": "markBR",
+        "name": "Marco",
+        "system": "Brazilian",
+        "factor": 229.525
+    },
+    "arrobaBR": {
+        "unitID": "arrobaBR",
+        "name": "Arroba",
+        "system": "Brazilian",
+        "factor": 14689.6
+    },
+    "hundredwtBR": {
+        "unitID": "hundredwtBR",
+        "name": "Quintal",
+        "system": "Brazilian",
+        "factor": 58758.4
+    },
+    "tonBR": {
+        "unitID": "tonBR",
+        "name": "Tonelada",
+        "system": "Brazilian",
+        "factor": 793238.4
+    },
+    "muoiWKH": {
+        "unitID": "muoiWKH",
+        "name": "Mot dong can tay",
+        "system": "Cambodian",
+        "factor": 600
+    },
+    "linKH": {
+        "unitID": "linKH",
+        "name": "Lin",
+        "system": "Cambodian",
+        "factor": 22.5
+    },
+    "hunKH": {
+        "unitID": "hunKH",
+        "name": "Hun",
+        "system": "Cambodian",
+        "factor": 225
+    },
+    "chinKH": {
+        "unitID": "chinKH",
+        "name": "Chin",
+        "system": "Cambodian",
+        "factor": 2250
+    },
+    "taelKH": {
+        "unitID": "taelKH",
+        "name": "Tael",
+        "system": "Cambodian",
+        "factor": 22500
+    },
+    "nealKH": {
+        "unitID": "nealKH",
+        "name": "Neal",
+        "system": "Cambodian",
+        "factor": 360000
+    },
+    "pramroiKH": {
+        "unitID": "pramroiKH",
+        "name": "Not can tay",
+        "system": "Cambodian",
+        "factor": 600000
+    },
+    "chongKH": {
+        "unitID": "chongKH",
+        "name": "Chong",
+        "system": "Cambodian",
+        "factor": 180000000
+    },
+    "hapKH": {
+        "unitID": "hapKH",
+        "name": "Picul",
+        "system": "Cambodian",
+        "factor": 3600000000
+    },
+    "grainCL": {
+        "unitID": "grainCL",
+        "name": "Grano",
+        "system": "Chilean",
+        "factor": 0.000049923285590277775
+    },
+    "dramCL": {
+        "unitID": "dramCL",
+        "name": "Adarme",
+        "system": "Chilean",
+        "factor": 0.00179723828125
+    },
+    "sastellanoCL": {
+        "unitID": "sastellanoCL",
+        "name": "Sastellano",
+        "system": "Chilean",
+        "factor": 0.00460093
+    },
+    "ounceCL": {
+        "unitID": "ounceCL",
+        "name": "Onza",
+        "system": "Chilean",
+        "factor": 0.0287558125
+    },
+    "poundCL": {
+        "unitID": "poundCL",
+        "name": "Libra",
+        "system": "Chilean",
+        "factor": 0.460093
+    },
+    "arrobaCL": {
+        "unitID": "arrobaCL",
+        "name": "Arroba",
+        "system": "Chilean",
+        "factor": 11.502324999999999
+    },
+    "quintalCL": {
+        "unitID": "quintalCL",
+        "name": "Quintal",
+        "system": "Chilean",
+        "factor": 46.009299999999996
+    },
+    "poundNL": {
+        "unitID": "poundNL",
+        "name": "Pond",
+        "symbol": "lb",
+        "system": "Dutch",
+        "factor": 500
+    },
+    "ounceNL": {
+        "unitID": "ounceNL",
+        "name": "Ons",
+        "symbol": "oz",
+        "system": "Dutch",
+        "factor": 100
+    },
+    "loadNL": {
+        "unitID": "loadNL",
+        "name": "Scheepslast",
+        "system": "Dutch",
+        "factor": 1976400
+    },
+    "medpoundNL": {
+        "unitID": "medpoundNL",
+        "name": "Medicinaal Pond",
+        "symbol": "lb",
+        "system": "Dutch",
+        "factor": 373.24172
+    },
+    "medounceNL": {
+        "unitID": "medounceNL",
+        "name": "Medicinaal Ons",
+        "symbol": "℥",
+        "system": "Dutch",
+        "factor": 31.103476666666666
+    },
+    "dramNL": {
+        "unitID": "dramNL",
+        "name": "Drachme",
+        "symbol": "ℨ",
+        "system": "Dutch",
+        "factor": 3.887934583333333
+    },
+    "scrupleNL": {
+        "unitID": "scrupleNL",
+        "name": "Scrupel",
+        "symbol": "℈",
+        "system": "Dutch",
+        "factor": 1.2959781944444444
+    },
+    "grainNL": {
+        "unitID": "grainNL",
+        "name": "Grein",
+        "symbol": "gr",
+        "system": "Dutch",
+        "factor": 0.06479890972222221
+    },
+    "kiratmEG": {
+        "unitID": "kiratmEG",
+        "name": "Kirat",
+        "system": "Egyptian",
+        "factor": 0.000195
+    },
+    "dirhemEG": {
+        "unitID": "dirhemEG",
+        "name": "Dirhem",
+        "system": "Egyptian",
+        "factor": 0.00312
+    },
+    "miskalEG": {
+        "unitID": "miskalEG",
+        "name": "Miskal",
+        "system": "Egyptian",
+        "factor": 0.01248
+    },
+    "okiehEG": {
+        "unitID": "okiehEG",
+        "name": "Okieh",
+        "system": "Egyptian",
+        "factor": 0.03744
+    },
+    "rotoliEG": {
+        "unitID": "rotoliEG",
+        "name": "Rotoli",
+        "system": "Egyptian",
+        "factor": 0.44927999999999996
+    },
+    "okeEG": {
+        "unitID": "okeEG",
+        "name": "Oke",
+        "system": "Egyptian",
+        "factor": 1.248
+    },
+    "kantarEG": {
+        "unitID": "kantarEG",
+        "name": "Kantar",
+        "system": "Egyptian",
+        "factor": 44.928
+    },
+    "helmEG": {
+        "unitID": "helmEG",
+        "name": "Helm",
+        "system": "Egyptian",
+        "factor": 249.6
+    },
+    "grainEN": {
+        "unitID": "grainEN",
+        "name": "Grain",
+        "symbol": "gr",
+        "system": "English",
+        "factor": 0.0648
+    },
+    "drammEN": {
+        "unitID": "drammEN",
+        "name": "Drachm",
+        "symbol": "dr",
+        "system": "English",
+        "factor": 1.772
+    },
+    "ounceEN": {
+        "unitID": "ounceEN",
+        "name": "Ounce",
+        "symbol": "oz",
+        "system": "English",
+        "factor": 28.35
+    },
+    "poundEN": {
+        "unitID": "poundEN",
+        "name": "Pound",
+        "symbol": "lb",
+        "system": "English",
+        "factor": 453.6
+    },
+    "stoneEN": {
+        "unitID": "stoneEN",
+        "name": "Stone",
+        "symbol": "st",
+        "system": "English",
+        "factor": 6350
+    },
+    "quarterEN": {
+        "unitID": "quarterEN",
+        "name": "Quarter",
+        "symbol": "qr",
+        "system": "English",
+        "factor": 12700
+    },
+    "hundredwtEN": {
+        "unitID": "hundredwtEN",
+        "name": "Hundredweight",
+        "symbol": "cwt",
+        "system": "English",
+        "factor": 50800
+    },
+    "tonEN": {
+        "unitID": "tonEN",
+        "name": "Ton",
+        "system": "English",
+        "factor": 1016000
+    },
+    "nailEN": {
+        "unitID": "nailEN",
+        "name": "Nail",
+        "system": "English",
+        "factor": 3175000
+    },
+    "todEN": {
+        "unitID": "todEN",
+        "name": "Tod",
+        "system": "English",
+        "factor": 12700
+    },
+    "poundER": {
+        "unitID": "poundER",
+        "name": "Rotolo",
+        "system": "Eritrean",
+        "factor": 0.448
+    },
+    "ounceER": {
+        "unitID": "ounceER",
+        "name": "Okia",
+        "system": "Eritrean",
+        "factor": 0.028
+    },
+    "gislaER": {
+        "unitID": "gislaER",
+        "name": "Gisla",
+        "system": "Eritrean",
+        "factor": 163000
+    },
+    "quentES": {
+        "unitID": "quentES",
+        "name": "Quent",
+        "system": "Estonian",
+        "factor": 3.359375
+    },
+    "lothES": {
+        "unitID": "lothES",
+        "name": "Loth",
+        "system": "Estonian",
+        "factor": 13.4375
+    },
+    "pfundES": {
+        "unitID": "pfundES",
+        "name": "Pfund",
+        "system": "Estonian",
+        "factor": 430
+    },
+    "liespfundES": {
+        "unitID": "liespfundES",
+        "name": "Liespfund",
+        "system": "Estonian",
+        "factor": 8600
+    },
+    "centnerES": {
+        "unitID": "centnerES",
+        "name": "Centner",
+        "system": "Estonian",
+        "factor": 51600
+    },
+    "tonneES": {
+        "unitID": "tonneES",
+        "name": "Tonne",
+        "system": "Estonian",
+        "factor": 103200
+    },
+    "schiffspfundES": {
+        "unitID": "schiffspfundES",
+        "name": "Schiffpfund",
+        "system": "Estonian",
+        "factor": 172000
+    },
+    "rottoET": {
+        "unitID": "rottoET",
+        "name": "Rotto",
+        "system": "Ethiopian",
+        "factor": 311
+    },
+    "mochaET": {
+        "unitID": "mochaET",
+        "name": "Mocha",
+        "system": "Ethiopian",
+        "factor": 31.1
+    },
+    "ounceET": {
+        "unitID": "ounceET",
+        "name": "Wakea",
+        "system": "Ethiopian",
+        "factor": 25.916666666666668
+    },
+    "derimeET": {
+        "unitID": "derimeET",
+        "name": "Derime",
+        "system": "Ethiopian",
+        "factor": 2.591666666666667
+    },
+    "dramET": {
+        "unitID": "dramET",
+        "name": "Drachm",
+        "system": "Ethiopian",
+        "factor": 2.591666666666667
+    },
+    "qvintinFI": {
+        "unitID": "qvintinFI",
+        "name": "Kvintiini",
+        "system": "Finnish",
+        "factor": 3.32090625
+    },
+    "lodFI": {
+        "unitID": "lodFI",
+        "name": "Luoti",
+        "system": "Finnish",
+        "factor": 13.283625
+    },
+    "unsFI": {
+        "unitID": "unsFI",
+        "name": "Unssi",
+        "system": "Finnish",
+        "factor": 26.56725
+    },
+    "markFI": {
+        "unitID": "markFI",
+        "name": "Markka",
+        "system": "Finnish",
+        "factor": 212.538
+    },
+    "naulaFI": {
+        "unitID": "naulaFI",
+        "name": "Naula",
+        "system": "Finnish",
+        "factor": 425.076
+    },
+    "lispundFI": {
+        "unitID": "lispundFI",
+        "name": "Leiviskä",
+        "system": "Finnish",
+        "factor": 8501.52
+    },
+    "setneriFI": {
+        "unitID": "setneriFI",
+        "name": "Sentneri",
+        "system": "Finnish",
+        "factor": 42507.600000000006
+    },
+    "kippuntaFI": {
+        "unitID": "kippuntaFI",
+        "name": "Kippunta",
+        "system": "Finnish",
+        "factor": 170030.40000000002
+    },
+    "poundFR": {
+        "unitID": "poundFR",
+        "name": "Livre",
+        "system": "French",
+        "factor": 12237.6
+    },
+    "ounceFR": {
+        "unitID": "ounceFR",
+        "name": "Once",
+        "system": "French",
+        "factor": 30.594
+    },
+    "markFR": {
+        "unitID": "markFR",
+        "name": "Marc",
+        "system": "French",
+        "factor": 244.753
+    },
+    "grosFR": {
+        "unitID": "grosFR",
+        "name": "Gros",
+        "system": "French",
+        "factor": 3.824
+    },
+    "denierFR": {
+        "unitID": "denierFR",
+        "name": "Denier",
+        "system": "French",
+        "factor": 1.274
+    },
+    "grainFR": {
+        "unitID": "grainFR",
+        "name": "Grain",
+        "system": "French",
+        "factor": 0.053
+    },
+    "pfundDE": {
+        "unitID": "pfundDE",
+        "name": "Pfund",
+        "system": "German",
+        "factor": 467.711
+    },
+    "markDE": {
+        "unitID": "markDE",
+        "name": "Mark",
+        "system": "German",
+        "factor": 233.8555
+    },
+    "ounceDE": {
+        "unitID": "ounceDE",
+        "name": "Unze",
+        "system": "German",
+        "factor": 29.2319375
+    },
+    "lothDE": {
+        "unitID": "lothDE",
+        "name": "Loth",
+        "system": "German",
+        "factor": 14.61596875
+    },
+    "quentchenDE": {
+        "unitID": "quentchenDE",
+        "name": "Quentchen",
+        "system": "German",
+        "factor": 4.871989583333334
+    },
+    "quintDE": {
+        "unitID": "quintDE",
+        "name": "Quint",
+        "system": "German",
+        "factor": 3.6539921875
+    },
+    "pfennigDE": {
+        "unitID": "pfennigDE",
+        "name": "Pfennig",
+        "system": "German",
+        "factor": 0.913498046875
+    },
+    "granDE": {
+        "unitID": "granDE",
+        "name": "Gran",
+        "system": "German",
+        "factor": 0.06082067620286086
+    },
+    "obolAG": {
+        "unitID": "obolAG",
+        "name": "ὀβολός ",
+        "system": "Ancient Greek",
+        "factor": 0.72
+    },
+    "dramAG": {
+        "unitID": "dramAG",
+        "name": "δραχμή ",
+        "system": "Ancient Greek",
+        "factor": 4.31
+    },
+    "minaAG": {
+        "unitID": "minaAG",
+        "name": "μνᾶ ",
+        "system": "Ancient Greek",
+        "factor": 431
+    },
+    "talentAG": {
+        "unitID": "talentAG",
+        "name": "τάλαντον ",
+        "system": "Ancient Greek",
+        "factor": 25860
+    },
+    "scrupleBZ": {
+        "unitID": "scrupleBZ",
+        "name": "γραμμα",
+        "system": "Byzantine",
+        "factor": 1.55
+    },
+    "semissisBZ": {
+        "unitID": "semissisBZ",
+        "name": "σημίσις",
+        "system": "Byzantine",
+        "factor": 2.27
+    },
+    "nomismaBZ": {
+        "unitID": "nomismaBZ",
+        "name": "νόμισμα",
+        "system": "Byzantine",
+        "factor": 4.55
+    },
+    "ouncewBZ": {
+        "unitID": "ouncewBZ",
+        "name": "οὐγγία",
+        "system": "Byzantine",
+        "factor": 37.3
+    },
+    "poundBZ": {
+        "unitID": "poundBZ",
+        "name": "λίτρα",
+        "system": "Byzantine",
+        "factor": 327.6
+    },
+    "kantarGN": {
+        "unitID": "kantarGN",
+        "name": "Kantar",
+        "system": "Guinean",
+        "factor": 0.977
+    },
+    "gammellGN": {
+        "unitID": "gammellGN",
+        "name": "Gammell",
+        "system": "Guinean",
+        "factor": 0.1954
+    },
+    "bendaGN": {
+        "unitID": "bendaGN",
+        "name": "Benda",
+        "system": "Guinean",
+        "factor": 0.0642
+    },
+    "akeyGN": {
+        "unitID": "akeyGN",
+        "name": "Akey",
+        "system": "Guinean",
+        "factor": 0.0013375
+    },
+    "mediatablaGN": {
+        "unitID": "mediatablaGN",
+        "name": "Mediatabla",
+        "system": "Guinean",
+        "factor": 0.00200625
+    },
+    "aguirageGN": {
+        "unitID": "aguirageGN",
+        "name": "Aguirage",
+        "system": "Guinean",
+        "factor": 0.0040125
+    },
+    "quintoGN": {
+        "unitID": "quintoGN",
+        "name": "Quinto",
+        "system": "Guinean",
+        "factor": 0.00601875
+    },
+    "pisoGN": {
+        "unitID": "pisoGN",
+        "name": "Piso",
+        "system": "Guinean",
+        "factor": 0.008025
+    },
+    "seronGN": {
+        "unitID": "seronGN",
+        "name": "Seron",
+        "system": "Guinean",
+        "factor": 0.0120375
+    },
+    "eggabaGN": {
+        "unitID": "eggabaGN",
+        "name": "Eggaba",
+        "system": "Guinean",
+        "factor": 0.0214
+    },
+    "poundIS": {
+        "unitID": "poundIS",
+        "name": "Pund",
+        "system": "Icelandic",
+        "factor": 0.5
+    },
+    "markIS": {
+        "unitID": "markIS",
+        "name": "Mörk",
+        "system": "Icelandic",
+        "factor": 0.25
+    },
+    "fishIS": {
+        "unitID": "fishIS",
+        "name": "Fisk",
+        "system": "Icelandic",
+        "factor": 4
+    },
+    "fierdingIS": {
+        "unitID": "fierdingIS",
+        "name": "Fierding",
+        "system": "Icelandic",
+        "factor": 20
+    },
+    "liespundIS": {
+        "unitID": "liespundIS",
+        "name": "Liespund",
+        "system": "Icelandic",
+        "factor": 32
+    },
+    "barrelbutIS": {
+        "unitID": "barrelbutIS",
+        "name": "tunna smjörs",
+        "system": "Icelandic",
+        "factor": 112
+    },
+    "skippundIS": {
+        "unitID": "skippundIS",
+        "name": "Skippund",
+        "system": "Icelandic",
+        "factor": 160
+    },
+    "battIS": {
+        "unitID": "battIS",
+        "name": "Batt",
+        "system": "Icelandic",
+        "factor": 160
+    },
+    "pikolwID": {
+        "unitID": "pikolwID",
+        "name": "Pikol",
+        "system": "Indonesian",
+        "factor": 61761.3025
+    },
+    "thailID": {
+        "unitID": "thailID",
+        "name": "Thail",
+        "system": "Indonesian",
+        "factor": 38.6008140625
+    },
+    "cattiID": {
+        "unitID": "cattiID",
+        "name": "Catti",
+        "system": "Indonesian",
+        "factor": 617.613025
+    },
+    "kabiID": {
+        "unitID": "kabiID",
+        "name": "Kabi",
+        "system": "Indonesian",
+        "factor": 617.613025
+    },
+    "kulackID": {
+        "unitID": "kulackID",
+        "name": "Kulack",
+        "system": "Indonesian",
+        "factor": 4477.69443125
+    },
+    "amatID": {
+        "unitID": "amatID",
+        "name": "Amat",
+        "system": "Indonesian",
+        "factor": 123522.605
+    },
+    "timbangID": {
+        "unitID": "timbangID",
+        "name": "Timbang",
+        "system": "Indonesian",
+        "factor": 308806.5125
+    },
+    "grainmIR": {
+        "unitID": "grainmIR",
+        "name": "Grán",
+        "system": "Irish",
+        "factor": 0.05
+    },
+    "pennyweightIR": {
+        "unitID": "pennyweightIR",
+        "name": "Pinginn",
+        "system": "Irish",
+        "factor": 0.4
+    },
+    "scrupleIR": {
+        "unitID": "scrupleIR",
+        "name": "Screaball",
+        "system": "Irish",
+        "factor": 1.2
+    },
+    "ounceIR": {
+        "unitID": "ounceIR",
+        "name": "Ungae",
+        "system": "Irish",
+        "factor": 28
+    },
+    "mowJP": {
+        "unitID": "mowJP",
+        "name": "Mō ",
+        "symbol": "毛 ",
+        "system": "Japanese",
+        "factor": 0.00000375
+    },
+    "rinmJP": {
+        "unitID": "rinmJP",
+        "name": "Rin",
+        "symbol": "厘",
+        "system": "Japanese",
+        "factor": 0.0000375
+    },
+    "funmJP": {
+        "unitID": "funmJP",
+        "name": "Fun",
+        "symbol": "分",
+        "system": "Japanese",
+        "factor": 0.000375
+    },
+    "mommeJP": {
+        "unitID": "mommeJP",
+        "name": "Momme",
+        "symbol": "匁",
+        "system": "Japanese",
+        "factor": 0.00375
+    },
+    "hyakumeJP": {
+        "unitID": "hyakumeJP",
+        "name": "Hyakume",
+        "symbol": "百目",
+        "system": "Japanese",
+        "factor": 0.375
+    },
+    "kinmJP": {
+        "unitID": "kinmJP",
+        "name": "Kin",
+        "symbol": "斤",
+        "system": "Japanese",
+        "factor": 0.6
+    },
+    "kanJP": {
+        "unitID": "kanJP",
+        "name": "Kan(me)",
+        "symbol": "貫(目) ",
+        "system": "Japanese",
+        "factor": 3.75
+    },
+    "maruJP": {
+        "unitID": "maruJP",
+        "name": "Maru",
+        "symbol": "丸",
+        "system": "Japanese",
+        "factor": 30
+    },
+    "tanmJP": {
+        "unitID": "tanmJP",
+        "name": "Tan",
+        "symbol": "担",
+        "system": "Japanese",
+        "factor": 60
+    },
+    "ounceKO": {
+        "unitID": "ounceKO",
+        "name": "Nyang",
+        "symbol": "냥",
+        "system": "Korean",
+        "factor": 37.5
+    },
+    "poundKO": {
+        "unitID": "poundKO",
+        "name": "Geun",
+        "symbol": "근",
+        "system": "Korean",
+        "factor": 600
+    },
+    "rottoloLY": {
+        "unitID": "rottoloLY",
+        "name": "Rottolo",
+        "system": "Libyan",
+        "factor": 512.8
+    },
+    "okaLY": {
+        "unitID": "okaLY",
+        "name": "Oka",
+        "system": "Libyan",
+        "factor": 1282
+    },
+    "meticalLY": {
+        "unitID": "meticalLY",
+        "name": "Metical",
+        "system": "Libyan",
+        "factor": 4.76
+    },
+    "variMG": {
+        "unitID": "variMG",
+        "name": "Vari",
+        "system": "Malagasy",
+        "factor": 2
+    },
+    "sompiMG": {
+        "unitID": "sompiMG",
+        "name": "Sompi",
+        "system": "Malagasy",
+        "factor": 4
+    },
+    "ounceMT": {
+        "unitID": "ounceMT",
+        "name": "Uqija",
+        "system": "Maltese",
+        "factor": 26.46
+    },
+    "ratalMT": {
+        "unitID": "ratalMT",
+        "name": "Ratal",
+        "system": "Maltese",
+        "factor": 793.8
+    },
+    "qantarMT": {
+        "unitID": "qantarMT",
+        "name": "Qantar",
+        "system": "Maltese",
+        "factor": 79380
+    },
+    "grainSUX": {
+        "unitID": "grainSUX",
+        "name": "še",
+        "symbol": "𒊺",
+        "system": "Mesopotamian",
+        "factor": 0.0466
+    },
+    "shekelmSUX": {
+        "unitID": "shekelmSUX",
+        "name": "gin2",
+        "symbol": "𒂆",
+        "system": "Mesopotamian",
+        "factor": 8.4
+    },
+    "minaSUX": {
+        "unitID": "minaSUX",
+        "name": "ma-na",
+        "symbol": "𒈠𒈾",
+        "system": "Mesopotamian",
+        "factor": 504
+    },
+    "talentSUX": {
+        "unitID": "talentSUX",
+        "name": "gun2",
+        "symbol": "𒄘",
+        "system": "Mesopotamian",
+        "factor": 30200
+    },
+    "rotalMA": {
+        "unitID": "rotalMA",
+        "name": "Rotal",
+        "system": "Moroccan",
+        "factor": 507.5
+    },
+    "artalMA": {
+        "unitID": "artalMA",
+        "name": "Artal",
+        "system": "Moroccan",
+        "factor": 507.5
+    },
+    "gerbeMA": {
+        "unitID": "gerbeMA",
+        "name": "Gerbe",
+        "system": "Moroccan",
+        "factor": 3000
+    },
+    "kulaMA": {
+        "unitID": "kulaMA",
+        "name": "Kula",
+        "system": "Moroccan",
+        "factor": 11165
+    },
+    "kantarMA": {
+        "unitID": "kantarMA",
+        "name": "Kantar",
+        "system": "Moroccan",
+        "factor": 50750
+    },
+    "ywaylayMM": {
+        "unitID": "ywaylayMM",
+        "name": "ရွေးလေး",
+        "system": "Burmese",
+        "factor": 0.136078
+    },
+    "ywaygyiMM": {
+        "unitID": "ywaygyiMM",
+        "name": "ရွေးကြီး",
+        "system": "Burmese",
+        "factor": 0.272156
+    },
+    "pethaMM": {
+        "unitID": "pethaMM",
+        "name": "ပဲသား",
+        "system": "Burmese",
+        "factor": 1.020585
+    },
+    "muthaMM": {
+        "unitID": "muthaMM",
+        "name": "မူးသား",
+        "system": "Burmese",
+        "factor": 2.04117
+    },
+    "matthaMM": {
+        "unitID": "matthaMM",
+        "name": "မတ်သား",
+        "system": "Burmese",
+        "factor": 4.08234
+    },
+    "ngamuthaMM": {
+        "unitID": "ngamuthaMM",
+        "name": "ငါးမူးသား",
+        "system": "Burmese",
+        "factor": 8.16468
+    },
+    "kyatthaMM": {
+        "unitID": "kyatthaMM",
+        "name": "ကျပ်သား",
+        "system": "Burmese",
+        "factor": 16.32936
+    },
+    "awetthaMM": {
+        "unitID": "awetthaMM",
+        "name": "အဝက်သား",
+        "system": "Burmese",
+        "factor": 204.11700000000002
+    },
+    "aseitthaMM": {
+        "unitID": "aseitthaMM",
+        "name": "အစိတ်သား",
+        "system": "Burmese",
+        "factor": 408.23400000000004
+    },
+    "ngasethaMM": {
+        "unitID": "ngasethaMM",
+        "name": "ငါးဆယ်သား",
+        "system": "Burmese",
+        "factor": 816.4680000000001
+    },
+    "peitthaMM": {
+        "unitID": "peitthaMM",
+        "name": "ပိဿာ",
+        "system": "Burmese",
+        "factor": 1632.9360000000001
+    },
+    "ortNO": {
+        "unitID": "ortNO",
+        "name": "Ort",
+        "system": "Norwegian",
+        "factor": 0.0009734375
+    },
+    "markNO": {
+        "unitID": "markNO",
+        "name": "Mark",
+        "system": "Norwegian",
+        "factor": 0.2492
+    },
+    "poundNO": {
+        "unitID": "poundNO",
+        "name": "Pund",
+        "system": "Norwegian",
+        "factor": 0.4984
+    },
+    "laupNO": {
+        "unitID": "laupNO",
+        "name": "Laup",
+        "system": "Norwegian",
+        "factor": 17.9424
+    },
+    "spannNO": {
+        "unitID": "spannNO",
+        "name": "Spann",
+        "system": "Norwegian",
+        "factor": 17.9424
+    },
+    "bismerpundNO": {
+        "unitID": "bismerpundNO",
+        "name": "Bismerpund",
+        "system": "Norwegian",
+        "factor": 5.9808
+    },
+    "vetteNO": {
+        "unitID": "vetteNO",
+        "name": "Vette",
+        "system": "Norwegian",
+        "factor": 7.17696
+    },
+    "vagNO": {
+        "unitID": "vagNO",
+        "name": "Våg ",
+        "system": "Norwegian",
+        "factor": 19.936
+    },
+    "skippundNO": {
+        "unitID": "skippundNO",
+        "name": "Skippund",
+        "system": "Norwegian",
+        "factor": 159.488
+    },
+    "maundOM": {
+        "unitID": "maundOM",
+        "name": "Maund",
+        "system": "Omani",
+        "factor": 248.0583273
+    },
+    "kotschaOM": {
+        "unitID": "kotschaOM",
+        "name": "Kotscha",
+        "system": "Omani",
+        "factor": 10.3357636375
+    },
+    "candyOM": {
+        "unitID": "candyOM",
+        "name": "Candy",
+        "system": "Omani",
+        "factor": 14883.499638
+    },
+    "karsaFA": {
+        "unitID": "karsaFA",
+        "name": "Karša",
+        "symbol": "𐎣𐎼𐏁 ",
+        "system": "Persian",
+        "factor": 83
+    },
+    "kurotPH": {
+        "unitID": "kurotPH",
+        "name": "Kurot",
+        "system": "Philippine",
+        "factor": 5
+    },
+    "daksPH": {
+        "unitID": "daksPH",
+        "name": "Daks",
+        "system": "Philippine",
+        "factor": 10
+    },
+    "guhitPH": {
+        "unitID": "guhitPH",
+        "name": "Guhit",
+        "system": "Philippine",
+        "factor": 100
+    },
+    "kagitnaPH": {
+        "unitID": "kagitnaPH",
+        "name": "Kagitna",
+        "system": "Philippine",
+        "factor": 500
+    },
+    "chimantaPH": {
+        "unitID": "chimantaPH",
+        "name": "Chimanta",
+        "system": "Philippine",
+        "factor": 6000
+    },
+    "kabanPH": {
+        "unitID": "kabanPH",
+        "name": "Kaban",
+        "system": "Philippine",
+        "factor": 50000
+    },
+    "tonPT": {
+        "unitID": "tonPT",
+        "name": "Tonelada",
+        "system": "Portuguese",
+        "factor": 793152
+    },
+    "hundredwtPT": {
+        "unitID": "hundredwtPT",
+        "name": "Quintal",
+        "system": "Portuguese",
+        "factor": 58752
+    },
+    "arrobaPT": {
+        "unitID": "arrobaPT",
+        "name": "Arroba",
+        "system": "Portuguese",
+        "factor": 14688
+    },
+    "poundPT": {
+        "unitID": "poundPT",
+        "name": "Arrátel",
+        "system": "Portuguese",
+        "factor": 459
+    },
+    "markPT": {
+        "unitID": "markPT",
+        "name": "Marco",
+        "system": "Portuguese",
+        "factor": 229.5
+    },
+    "QuarterPT": {
+        "unitID": "QuarterPT",
+        "name": "Quarta",
+        "system": "Portuguese",
+        "factor": 114.75
+    },
+    "ouncePT": {
+        "unitID": "ouncePT",
+        "name": "Onça ",
+        "system": "Portuguese",
+        "factor": 28.6875
+    },
+    "dramPT": {
+        "unitID": "dramPT",
+        "name": "Oitava",
+        "system": "Portuguese",
+        "factor": 3.5859375
+    },
+    "scruplePT": {
+        "unitID": "scruplePT",
+        "name": "Escrópulo",
+        "system": "Portuguese",
+        "factor": 1.1953125
+    },
+    "grainPT": {
+        "unitID": "grainPT",
+        "name": "Grão",
+        "system": "Portuguese",
+        "factor": 0.0498046875
+    },
+    "poundLA": {
+        "unitID": "poundLA",
+        "name": "Libra",
+        "symbol": "lb",
+        "system": "Roman",
+        "factor": 328.9
+    },
+    "ounceLA": {
+        "unitID": "ounceLA",
+        "name": "Uncia",
+        "symbol": "oz",
+        "system": "Roman",
+        "factor": 27.4
+    },
+    "dramRO": {
+        "unitID": "dramRO",
+        "name": "Dram",
+        "symbol": "dr",
+        "system": "Romanian",
+        "factor": 3.18
+    },
+    "fontRO": {
+        "unitID": "fontRO",
+        "name": "Font",
+        "system": "Romanian",
+        "factor": 500
+    },
+    "portionRU": {
+        "unitID": "portionRU",
+        "name": "до́ля",
+        "system": "Russian",
+        "factor": 0.04443545789930556
+    },
+    "goldRU": {
+        "unitID": "goldRU",
+        "name": "золотни́к",
+        "system": "Russian",
+        "factor": 4.265803958333334
+    },
+    "lothRU": {
+        "unitID": "lothRU",
+        "name": "лот",
+        "system": "Russian",
+        "factor": 12.797411875
+    },
+    "poundRU": {
+        "unitID": "poundRU",
+        "name": "фунт",
+        "system": "Russian",
+        "factor": 409.51718
+    },
+    "pondoRU": {
+        "unitID": "pondoRU",
+        "name": "пуд",
+        "system": "Russian",
+        "factor": 16380.6872
+    },
+    "okaRS": {
+        "unitID": "okaRS",
+        "name": "Oka",
+        "system": "Serbian",
+        "factor": 1278.6
+    },
+    "litraRS": {
+        "unitID": "litraRS",
+        "name": "Litra",
+        "system": "Serbian",
+        "factor": 319.65
+    },
+    "drachmRS": {
+        "unitID": "drachmRS",
+        "name": "Drachm",
+        "system": "Serbian",
+        "factor": 3.1965
+    },
+    "maceSG": {
+        "unitID": "maceSG",
+        "name": "Miam",
+        "system": "Singaporean",
+        "factor": 3.36954
+    },
+    "buncalSG": {
+        "unitID": "buncalSG",
+        "name": "Buncal",
+        "system": "Singaporean",
+        "factor": 53.2647
+    },
+    "ounceES": {
+        "unitID": "ounceES",
+        "name": "Onza",
+        "system": "Spanish",
+        "factor": 28
+    },
+    "poundES": {
+        "unitID": "poundES",
+        "name": "Libra",
+        "system": "Spanish",
+        "factor": 448
+    },
+    "quintalES": {
+        "unitID": "quintalES",
+        "name": "Quintal",
+        "system": "Spanish",
+        "factor": 44800
+    },
+    "skeppspundSV": {
+        "unitID": "skeppspundSV",
+        "name": "Skeppsund",
+        "system": "Swedish",
+        "factor": 170030
+    },
+    "bismerpundSV": {
+        "unitID": "bismerpundSV",
+        "name": "Bismerpund",
+        "system": "Swedish",
+        "factor": 5101
+    },
+    "lispundSV": {
+        "unitID": "lispundSV",
+        "name": "Lispund",
+        "system": "Swedish",
+        "factor": 8502
+    },
+    "skalpundSV": {
+        "unitID": "skalpundSV",
+        "name": "Skålpund",
+        "system": "Swedish",
+        "factor": 425.07
+    },
+    "markSV": {
+        "unitID": "markSV",
+        "name": "Mark",
+        "system": "Swedish",
+        "factor": 212.5
+    },
+    "ortSV": {
+        "unitID": "ortSV",
+        "name": "Ort",
+        "system": "Swedish",
+        "factor": 4.2508
+    },
+    "livreCH": {
+        "unitID": "livreCH",
+        "name": "Livre",
+        "system": "Swiss",
+        "factor": 0.5
+    },
+    "lothCH": {
+        "unitID": "lothCH",
+        "name": "Loth",
+        "system": "Swiss",
+        "factor": 0.015625
+    },
+    "ounceCH": {
+        "unitID": "ounceCH",
+        "name": "Once",
+        "system": "Swiss",
+        "factor": 0.03125
+    },
+    "quintalCH": {
+        "unitID": "quintalCH",
+        "name": "Quintal",
+        "system": "Swiss",
+        "factor": 50
+    },
+    "liTW": {
+        "unitID": "liTW",
+        "name": "Lî",
+        "symbol": "釐",
+        "system": "Taiwanese",
+        "factor": 0.0375
+    },
+    "hunmTW": {
+        "unitID": "hunmTW",
+        "name": "Hun",
+        "symbol": "分",
+        "system": "Taiwanese",
+        "factor": 0.375
+    },
+    "chinTW": {
+        "unitID": "chinTW",
+        "name": "Chîⁿ",
+        "symbol": "錢",
+        "system": "Taiwanese",
+        "factor": 3.75
+    },
+    "niuTW": {
+        "unitID": "niuTW",
+        "name": "Niú",
+        "symbol": "兩",
+        "system": "Taiwanese",
+        "factor": 37.5
+    },
+    "kinTW": {
+        "unitID": "kinTW",
+        "name": "Kin",
+        "symbol": "斤",
+        "system": "Taiwanese",
+        "factor": 600
+    },
+    "tanTW": {
+        "unitID": "tanTW",
+        "name": "Tàⁿ",
+        "symbol": "擔",
+        "system": "Taiwanese",
+        "factor": 60000
+    },
+    "caratTKR": {
+        "unitID": "caratTKR",
+        "name": "kirat",
+        "system": "Turkish",
+        "factor": 0.2004
+    },
+    "dramTKR": {
+        "unitID": "dramTKR",
+        "name": "dirhem",
+        "system": "Turkish",
+        "factor": 3.207
+    },
+    "okaTKR": {
+        "unitID": "okaTKR",
+        "name": "okka",
+        "system": "Turkish",
+        "factor": 1282
+    },
+    "weightbridgeTKR": {
+        "unitID": "weightbridgeTKR",
+        "name": "kantar",
+        "system": "Turkish",
+        "factor": 56449
+    },
+    "tanwVN": {
+        "unitID": "tanwVN",
+        "name": "tấn",
+        "symbol": "擯",
+        "system": "Vietnamese",
+        "factor": 1000000
+    },
+    "tawVN": {
+        "unitID": "tawVN",
+        "name": "tạ",
+        "symbol": "榭",
+        "system": "Vietnamese",
+        "factor": 100000
+    },
+    "yenwVN": {
+        "unitID": "yenwVN",
+        "name": "yến",
+        "system": "Vietnamese",
+        "factor": 10000
+    },
+    "langVN": {
+        "unitID": "langVN",
+        "name": "lạng",
+        "symbol": "兩",
+        "system": "Vietnamese",
+        "factor": 100
     }
 }
