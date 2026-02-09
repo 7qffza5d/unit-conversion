@@ -177,17 +177,17 @@ async function renderUnitList(searchTerm = '') {
                 unitCard.classList.add('selected');
             }
             
-            const iconText = unit.symbol.length <= 3 ? unit.symbol : unit.name.charAt(0);
+            const iconText = unit.symbol && unit.symbol.length <= 3 ? unit.symbol : unit.name.charAt(0);
             
             unitCard.innerHTML = `
                 <div class="unit-card-header">
                     <div class="unit-icon">${iconText}</div>
                     <div class="unit-card-title">
                         <div class="unit-name">${unit.name}</div>
-                        <div class="unit-symbol">${unit.symbol}</div>
+                            ${unit.symbol ? `<div class="unit-symbol">${unit.symbol}</div>` : ''}
+                        </div>
                     </div>
-                </div>
-                <button class="add-prefix-btn">+ Prefix</button>
+                    <button class="add-prefix-btn">+ Prefix</button>
                 ${unit.description ? `<div class="unit-info">${unit.description}</div>` : ''}
             `;
             
@@ -217,10 +217,10 @@ async function renderUnitList(searchTerm = '') {
 function selectUnit(key, unit) {
     if (currentModalTarget === 'from') {
         selectedFromUnit = key;
-        document.getElementById('fromUnitDisplay').textContent = `${unit.name} (${unit.symbol})`;
+        document.getElementById('fromUnitDisplay').textContent = `${unit.name} ${unit.symbol ? (unit.symbol) : ""}`;
     } else {
         selectedToUnit = key;
-        document.getElementById('toUnitDisplay').textContent = `${unit.name} (${unit.symbol})`;
+        document.getElementById('toUnitDisplay').textContent = `${unit.name} ${unit.symbol ? (unit.symbol) : ""}`;
     }
     
     closeUnitModal();
@@ -356,7 +356,7 @@ function applyPrefix(unitKey, prefixName, prefix) {
     const newUnit = {
         factor: unit.factor * prefix.factor,
         offset: unit.offset || 0,
-        symbol: prefix.symbol + unit.symbol,
+        symbol: unit.symbol ? prefix.symbol + unit.symbol : "",
         name: prefixName + unit.name.toLowerCase(),
         system: unit.system,
         description: `${prefix.factor} ${unit.name.toLowerCase()}s`

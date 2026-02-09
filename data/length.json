@@ -1,14 +1,2447 @@
 {
     "meter": {
+        "unitID": "meter",
         "name": "Meter",
         "symbol": "m",
         "system": "Metric",
         "factor": 1
     },
-    "feet": {
-        "name": "Feet",
+    "twip": {
+        "unitID": "twip",
+        "name": "Twip",
+        "symbol": "twip",
+        "system": "US Customary",
+        "factor": 1.76389e-8
+    },
+    "milUS": {
+        "unitID": "milUS",
+        "name": "Mil",
+        "symbol": "mil",
+        "system": "US Customary",
+        "factor": 2.54e-8
+    },
+    "pointUS": {
+        "unitID": "pointUS",
+        "name": "Point",
+        "symbol": "p",
+        "system": "US Customary",
+        "factor": 3.52778e-7
+    },
+    "picaUS": {
+        "unitID": "picaUS",
+        "name": "Pica",
+        "symbol": "P",
+        "system": "US Customary",
+        "factor": 0.004233
+    },
+    "inchUS": {
+        "unitID": "inchUS",
+        "name": "Inch",
+        "symbol": "in",
+        "system": "US Customary",
+        "factor": 0.0254
+    },
+    "footUS": {
+        "unitID": "footUS",
+        "name": "Foot",
         "symbol": "ft",
         "system": "US Customary",
         "factor": 0.3048
+    },
+    "yardUS": {
+        "unitID": "yardUS",
+        "name": "Yard",
+        "symbol": "yd",
+        "system": "US Customary",
+        "factor": 0.9144
+    },
+    "mileUS": {
+        "unitID": "mileUS",
+        "name": "Mile",
+        "symbol": "mil",
+        "system": "US Customary",
+        "factor": 1609.344
+    },
+    "leagueUS": {
+        "unitID": "leagueUS",
+        "name": "League",
+        "symbol": "le",
+        "system": "US Customary",
+        "factor": 4828.032
+    },
+    "fathomUS": {
+        "unitID": "fathomUS",
+        "name": "Fathom",
+        "symbol": "ftm",
+        "system": "US Customary",
+        "factor": 1.8288
+    },
+    "cableUS": {
+        "unitID": "cableUS",
+        "name": "Cable",
+        "symbol": "cb",
+        "system": "US Customary",
+        "factor": 219.456
+    },
+    "nautmileUS": {
+        "unitID": "nautmileUS",
+        "name": "Nautical Mile",
+        "symbol": "nmi",
+        "system": "US Customary",
+        "factor": 1852
+    },
+    "krabiatTH": {
+        "unitID": "krabiatTH",
+        "name": "Krabiat (กระเบียด)",
+        "system": "Thai",
+        "factor": 0.005208
+    },
+    "nioTH": {
+        "unitID": "nioTH",
+        "name": "Nio (นิ้ว)",
+        "system": "Thai",
+        "factor": 0.02083
+    },
+    "khuepTH": {
+        "unitID": "khuepTH",
+        "name": "Kheup (คืบ)",
+        "system": "Thai",
+        "factor": 0.25
+    },
+    "sokTH": {
+        "unitID": "sokTH",
+        "name": "Sok (ศอก)",
+        "system": "Thai",
+        "factor": 0.5
+    },
+    "waTH": {
+        "unitID": "waTH",
+        "name": "Wa (วา)",
+        "system": "Thai",
+        "factor": 2
+    },
+    "senTH": {
+        "unitID": "senTH",
+        "name": "Sen (เส้น)",
+        "system": "Thai",
+        "factor": 40
+    },
+    "yotTH": {
+        "unitID": "yotTH",
+        "name": "Yot (โยชน์)",
+        "system": "Thai",
+        "factor": 16000
+    },
+    "gazishahAF": {
+        "unitID": "gazishahAF",
+        "name": "Gaz-i-shah",
+        "system": "Afghan",
+        "factor": 1.065
+    },
+    "girahi_gazishahAF": {
+        "unitID": "girahi_gazishahAF",
+        "name": "Girah-i Gaz-i-shah",
+        "system": "Afghan",
+        "factor": 0.066
+    },
+    "gazimimarAF": {
+        "unitID": "gazimimarAF",
+        "name": "Gaz-i-mimar",
+        "system": "Afghan",
+        "factor": 0.838
+    },
+    "gazijareebAF": {
+        "unitID": "gazijareebAF",
+        "name": "Gaz-i-jareeb",
+        "system": "Afghan",
+        "factor": 0.736
+    },
+    "jareeb1AF": {
+        "unitID": "jareeb1AF",
+        "name": "Jareeb",
+        "system": "Afghan",
+        "factor": 44.183
+    },
+    "biswahAF": {
+        "unitID": "biswahAF",
+        "name": "Biswah",
+        "system": "Afghan",
+        "factor": 9.879
+    },
+    "biswasahAF": {
+        "unitID": "biswasahAF",
+        "name": "Biswasah",
+        "system": "Afghan",
+        "factor": 2.209
+    },
+    "goesAF": {
+        "unitID": "goesAF",
+        "name": "Goes",
+        "system": "Afghan",
+        "factor": 1.16
+    },
+    "terminDZ": {
+        "unitID": "terminDZ",
+        "name": "Termin",
+        "system": "Algerian",
+        "factor": 0.08
+    },
+    "rebiaDZ": {
+        "unitID": "rebiaDZ",
+        "name": "Rebia",
+        "system": "Algerian",
+        "factor": 0.16
+    },
+    "nusDZ": {
+        "unitID": "nusDZ",
+        "name": "Nus",
+        "system": "Algerian",
+        "factor": 0.32
+    },
+    "picDZ": {
+        "unitID": "picDZ",
+        "name": "Pic",
+        "system": "Algerian",
+        "factor": 0.64
+    },
+    "fingerAR": {
+        "unitID": "fingerAR",
+        "name": "إصبع",
+        "symbol": "إصبع",
+        "system": "Arabic",
+        "factor": 0.0225
+    },
+    "palmAR": {
+        "unitID": "palmAR",
+        "name": "قبضة",
+        "symbol": "قبضة",
+        "system": "Arabic",
+        "factor": 0.09
+    },
+    "footAR": {
+        "unitID": "footAR",
+        "name": "قدم عربية",
+        "symbol": "قدم عربية",
+        "system": "Arabic",
+        "factor": 0.32
+    },
+    "cubitAR": {
+        "unitID": "cubitAR",
+        "name": "ذراع",
+        "symbol": "ذراع",
+        "system": "Arabic",
+        "factor": 0.64
+    },
+    "paceAR": {
+        "unitID": "paceAR",
+        "name": "قامة",
+        "symbol": "قامة",
+        "system": "Arabic",
+        "factor": 1.92
+    },
+    "caneAR": {
+        "unitID": "caneAR",
+        "name": "قصبة",
+        "symbol": "قصبة",
+        "system": "Arabic",
+        "factor": 3.84
+    },
+    "stadeAR": {
+        "unitID": "stadeAR",
+        "name": "Seir",
+        "system": "Arabic",
+        "factor": 192
+    },
+    "leagueAR": {
+        "unitID": "leagueAR",
+        "name": "فرسخ",
+        "symbol": "فرسخ",
+        "system": "Arabic",
+        "factor": 5760
+    },
+    "mileAR": {
+        "unitID": "mileAR",
+        "name": "Al-mil",
+        "symbol": "الميل",
+        "system": "Arabic",
+        "factor": 1960
+    },
+    "lineARG": {
+        "unitID": "lineARG",
+        "name": "Línea",
+        "system": "Argentine",
+        "factor": 0.0020060185185185185
+    },
+    "inchARG": {
+        "unitID": "inchARG",
+        "name": "Pulgada",
+        "system": "Argentine",
+        "factor": 0.010076744186046512
+    },
+    "palmARG": {
+        "unitID": "palmARG",
+        "name": "Palma",
+        "system": "Argentine",
+        "factor": 0.21665
+    },
+    "footARG": {
+        "unitID": "footARG",
+        "name": "Pié",
+        "system": "Argentine",
+        "factor": 0.28886666666666666
+    },
+    "yardARG": {
+        "unitID": "yardARG",
+        "name": "Vara",
+        "system": "Argentine",
+        "factor": 0.8666
+    },
+    "fathomARG": {
+        "unitID": "fathomARG",
+        "name": "Braza",
+        "system": "Argentine",
+        "factor": 1.7332
+    },
+    "cuadraARG": {
+        "unitID": "cuadraARG",
+        "name": "Cuadra",
+        "system": "Argentine",
+        "factor": 129.99
+    },
+    "leagueARG": {
+        "unitID": "leagueARG",
+        "name": "Legua",
+        "system": "Argentine",
+        "factor": 5199.6
+    },
+    "percheBE": {
+        "unitID": "percheBE",
+        "name": "Perche",
+        "system": "Belgian",
+        "factor": 6.497
+    },
+    "piedBE": {
+        "unitID": "piedBE",
+        "name": "Pied",
+        "system": "Belgian",
+        "factor": 0.32484999999999997
+    },
+    "inchBR": {
+        "unitID": "inchBR",
+        "name": "Polegada",
+        "system": "Brazilian",
+        "factor": 0.0275
+    },
+    "palmBR": {
+        "unitID": "palmBR",
+        "name": "Palmo",
+        "system": "Brazilian",
+        "factor": 0.22
+    },
+    "footBR": {
+        "unitID": "footBR",
+        "name": "Pé",
+        "system": "Brazilian",
+        "factor": 0.33
+    },
+    "yardBR": {
+        "unitID": "yardBR",
+        "name": "Vara",
+        "system": "Brazilian",
+        "factor": 1.1
+    },
+    "paceBR": {
+        "unitID": "paceBR",
+        "name": "Passo Geométrico",
+        "system": "Brazilian",
+        "factor": 1.6500000000000001
+    },
+    "fathomBR": {
+        "unitID": "fathomBR",
+        "name": "Braça",
+        "system": "Brazilian",
+        "factor": 2.2
+    },
+    "leagueBR": {
+        "unitID": "leagueBR",
+        "name": "Légua ",
+        "system": "Brazilian",
+        "factor": 6600
+    },
+    "muoiKH": {
+        "unitID": "muoiKH",
+        "name": "Mot Thuoc",
+        "system": "Cambodian",
+        "factor": 1
+    },
+    "phyeamKH": {
+        "unitID": "phyeamKH",
+        "name": "Phyeam",
+        "system": "Cambodian",
+        "factor": 2
+    },
+    "senKH": {
+        "unitID": "senKH",
+        "name": "Sen",
+        "system": "Cambodian",
+        "factor": 40
+    },
+    "yochKH": {
+        "unitID": "yochKH",
+        "name": "Yoch",
+        "system": "Cambodian",
+        "factor": 16000
+    },
+    "chamamKH": {
+        "unitID": "chamamKH",
+        "name": "Cham Am",
+        "system": "Cambodian",
+        "factor": 0.25
+    },
+    "thneapKH": {
+        "unitID": "thneapKH",
+        "name": "Thneap",
+        "system": "Cambodian",
+        "factor": 0.020833333333333332
+    },
+    "lineCL": {
+        "unitID": "lineCL",
+        "name": "Línea",
+        "system": "Chilean",
+        "factor": 0.0019351851851851852
+    },
+    "inchCL": {
+        "unitID": "inchCL",
+        "name": "Pulgada",
+        "system": "Chilean",
+        "factor": 0.02322222222222222
+    },
+    "footCL": {
+        "unitID": "footCL",
+        "name": "Pie",
+        "system": "Chilean",
+        "factor": 0.2786666666666667
+    },
+    "yardCL": {
+        "unitID": "yardCL",
+        "name": "Vara",
+        "system": "Chilean",
+        "factor": 0.836
+    },
+    "cuadraCL": {
+        "unitID": "cuadraCL",
+        "name": "Cuadra",
+        "system": "Chilean",
+        "factor": 125.39999999999999
+    },
+    "leagueCL": {
+        "unitID": "leagueCL",
+        "name": "Legua",
+        "system": "Chilean",
+        "factor": 4514.4
+    },
+    "mileCN": {
+        "unitID": "mileCN",
+        "name": "Lǐ",
+        "symbol": "市里 ",
+        "system": "Chinese",
+        "factor": 500
+    },
+    "chainCN": {
+        "unitID": "chainCN",
+        "name": "Yǐn",
+        "symbol": "引 ",
+        "system": "Chinese",
+        "factor": 33.333333333333336
+    },
+    "yardCN": {
+        "unitID": "yardCN",
+        "name": "Zhàng",
+        "symbol": "市丈 ",
+        "system": "Chinese",
+        "factor": 3.3333333333333335
+    },
+    "footCN": {
+        "unitID": "footCN",
+        "name": "Chǐ",
+        "symbol": "市尺 ",
+        "system": "Chinese",
+        "factor": 0.3333333333333333
+    },
+    "inchCN": {
+        "unitID": "inchCN",
+        "name": "Cùn",
+        "symbol": "市寸 ",
+        "system": "Chinese",
+        "factor": 0.03333333333333333
+    },
+    "lineCN": {
+        "unitID": "lineCN",
+        "name": "Fēn",
+        "symbol": "市分 ",
+        "system": "Chinese",
+        "factor": 0.0033333333333333335
+    },
+    "calibreCN": {
+        "unitID": "calibreCN",
+        "name": "Lí",
+        "symbol": "釐 ",
+        "system": "Chinese",
+        "factor": 0.0003333333333333333
+    },
+    "milCN": {
+        "unitID": "milCN",
+        "name": "Háo",
+        "symbol": "毫",
+        "system": "Chinese",
+        "factor": 0.000033333333333333335
+    },
+    "latroCZ": {
+        "unitID": "latroCZ",
+        "name": "Látro ",
+        "system": "Czech",
+        "factor": 1.917
+    },
+    "stopaCZ": {
+        "unitID": "stopaCZ",
+        "name": "Střevíc",
+        "system": "Czech",
+        "factor": 0.296
+    },
+    "sahCZ": {
+        "unitID": "sahCZ",
+        "name": "Sáh ",
+        "system": "Czech",
+        "factor": 1.778
+    },
+    "mileCZ": {
+        "unitID": "mileCZ",
+        "name": "Míle ",
+        "system": "Czech",
+        "factor": 7003
+    },
+    "mileDK": {
+        "unitID": "mileDK",
+        "name": "Mil",
+        "symbol": "mi",
+        "system": "Danish",
+        "factor": 7532
+    },
+    "palmDK": {
+        "unitID": "palmDK",
+        "name": "Palme",
+        "system": "Danish",
+        "factor": 0.0886
+    },
+    "ellDK": {
+        "unitID": "ellDK",
+        "name": "Alen",
+        "system": "Danish",
+        "factor": 0.6277
+    },
+    "footDK": {
+        "unitID": "footDK",
+        "name": "Fod",
+        "system": "Danish",
+        "factor": 0.31385
+    },
+    "rutDK": {
+        "unitID": "rutDK",
+        "name": "Rut",
+        "system": "Danish",
+        "factor": 5.026
+    },
+    "mileNL": {
+        "unitID": "mileNL",
+        "name": "Mijl",
+        "system": "Dutch",
+        "factor": 6280
+    },
+    "rodNL": {
+        "unitID": "rodNL",
+        "name": "Roede",
+        "system": "Dutch",
+        "factor": 3.767
+    },
+    "ellNL": {
+        "unitID": "ellNL",
+        "name": "El",
+        "system": "Dutch",
+        "factor": 0.69425
+    },
+    "footNL": {
+        "unitID": "footNL",
+        "name": "Voet",
+        "system": "Dutch",
+        "factor": 0.314
+    },
+    "palmNL": {
+        "unitID": "palmNL",
+        "name": "Palm",
+        "system": "Dutch",
+        "factor": 0.1
+    },
+    "inchNL": {
+        "unitID": "inchNL",
+        "name": "Duim",
+        "system": "Dutch",
+        "factor": 0.0261
+    },
+    "kiratEG": {
+        "unitID": "kiratEG",
+        "name": "Kirat",
+        "system": "Egyptian",
+        "factor": 0.010604166666666666
+    },
+    "abdatEG": {
+        "unitID": "abdatEG",
+        "name": "Abdat",
+        "system": "Egyptian",
+        "factor": 0.042416666666666665
+    },
+    "kadamEG": {
+        "unitID": "kadamEG",
+        "name": "Kadam",
+        "system": "Egyptian",
+        "factor": 0.12725
+    },
+    "picEG": {
+        "unitID": "picEG",
+        "name": "Pic",
+        "system": "Egyptian",
+        "factor": 0.2545
+    },
+    "gasabEG": {
+        "unitID": "gasabEG",
+        "name": "Gasab",
+        "system": "Egyptian",
+        "factor": 1.018
+    },
+    "milhachmiEG": {
+        "unitID": "milhachmiEG",
+        "name": "Mil Hachmi",
+        "system": "Egyptian",
+        "factor": 254.5
+    },
+    "farsakhEG": {
+        "unitID": "farsakhEG",
+        "name": "Farsakh",
+        "system": "Egyptian",
+        "factor": 763.5
+    },
+    "poppyseedEN": {
+        "unitID": "poppyseedEN",
+        "name": "Poppyseed",
+        "system": "English",
+        "factor": 0.00212
+    },
+    "lineEN": {
+        "unitID": "lineEN",
+        "name": "Line",
+        "system": "English",
+        "factor": 0.00212
+    },
+    "barleycornEN": {
+        "unitID": "barleycornEN",
+        "name": "Barleycorn",
+        "system": "English",
+        "factor": 0.00847
+    },
+    "digitEN": {
+        "unitID": "digitEN",
+        "name": "Digit",
+        "system": "English",
+        "factor": 0.01905
+    },
+    "fingerEN": {
+        "unitID": "fingerEN",
+        "name": "Finger",
+        "system": "English",
+        "factor": 0.02223
+    },
+    "inchEN": {
+        "unitID": "inchEN",
+        "name": "Inch",
+        "system": "English",
+        "factor": 0.0254
+    },
+    "nailEN": {
+        "unitID": "nailEN",
+        "name": "Nail",
+        "system": "English",
+        "factor": 0.05715
+    },
+    "palmEN": {
+        "unitID": "palmEN",
+        "name": "Palm",
+        "system": "English",
+        "factor": 0.0762
+    },
+    "handEN": {
+        "unitID": "handEN",
+        "name": "Hand",
+        "system": "English",
+        "factor": 0.1016
+    },
+    "shaftmentEN": {
+        "unitID": "shaftmentEN",
+        "name": "Shaftment",
+        "system": "English",
+        "factor": 0.165
+    },
+    "linkEN": {
+        "unitID": "linkEN",
+        "name": "Link",
+        "system": "English",
+        "factor": 0.2012
+    },
+    "spanEN": {
+        "unitID": "spanEN",
+        "name": "Span",
+        "system": "English",
+        "factor": 0.2286
+    },
+    "footEN": {
+        "unitID": "footEN",
+        "name": "Foot",
+        "system": "English",
+        "factor": 0.3048
+    },
+    "cubitEN": {
+        "unitID": "cubitEN",
+        "name": "Cubit",
+        "system": "English",
+        "factor": 0.4572
+    },
+    "yardEN": {
+        "unitID": "yardEN",
+        "name": "Yard",
+        "system": "English",
+        "factor": 0.914
+    },
+    "ellEN": {
+        "unitID": "ellEN",
+        "name": "Ell",
+        "system": "English",
+        "factor": 1.143
+    },
+    "fathomEN": {
+        "unitID": "fathomEN",
+        "name": "Fathom",
+        "system": "English",
+        "factor": 1.829
+    },
+    "rodEN": {
+        "unitID": "rodEN",
+        "name": "Rod",
+        "system": "English",
+        "factor": 5.0292
+    },
+    "chainEN": {
+        "unitID": "chainEN",
+        "name": "Chain",
+        "system": "English",
+        "factor": 20.116
+    },
+    "skeinEN": {
+        "unitID": "skeinEN",
+        "name": "Skein",
+        "system": "English",
+        "factor": 109.73
+    },
+    "furlongEN": {
+        "unitID": "furlongEN",
+        "name": "Furlong",
+        "system": "English",
+        "factor": 201.168
+    },
+    "hankEN": {
+        "unitID": "hankEN",
+        "name": "Hank",
+        "system": "English",
+        "factor": 658.38
+    },
+    "mileEN": {
+        "unitID": "mileEN",
+        "name": "Mile",
+        "system": "English",
+        "factor": 1610
+    },
+    "leagueEN": {
+        "unitID": "leagueEN",
+        "name": "League",
+        "system": "English",
+        "factor": 4830
+    },
+    "spindleEN": {
+        "unitID": "spindleEN",
+        "name": "Spindle",
+        "system": "English",
+        "factor": 13160
+    },
+    "cubiER": {
+        "unitID": "cubiER",
+        "name": "Cubi",
+        "system": "Eritrean",
+        "factor": 0.32
+    },
+    "emmetER": {
+        "unitID": "emmetER",
+        "name": "Emmet",
+        "system": "Eritrean",
+        "factor": 0.46
+    },
+    "archineES": {
+        "unitID": "archineES",
+        "name": "Archine",
+        "system": "Estonian",
+        "factor": 0.7112
+    },
+    "elleES": {
+        "unitID": "elleES",
+        "name": "Kuunar",
+        "system": "Estonian",
+        "factor": 0.5334000000000001
+    },
+    "footES": {
+        "unitID": "footES",
+        "name": "Pie",
+        "system": "Spanish",
+        "factor": 0.2786
+    },
+    "fadenES": {
+        "unitID": "fadenES",
+        "name": "Faden",
+        "system": "Estonian",
+        "factor": 2.1336000000000004
+    },
+    "picET": {
+        "unitID": "picET",
+        "name": "Pic",
+        "system": "Ethiopian",
+        "factor": 0.686
+    },
+    "farsangET": {
+        "unitID": "farsangET",
+        "name": "Farsang",
+        "system": "Ethiopian",
+        "factor": 5070
+    },
+    "berriET": {
+        "unitID": "berriET",
+        "name": "Berri",
+        "system": "Ethiopian",
+        "factor": 1690
+    },
+    "linjaFI": {
+        "unitID": "linjaFI",
+        "name": "Linja",
+        "system": "Finnish",
+        "factor": 0.0020618055555555554
+    },
+    "tuumaFI": {
+        "unitID": "tuumaFI",
+        "name": "Tuuma",
+        "system": "Finnish",
+        "factor": 0.024741666666666665
+    },
+    "vaaksaFI": {
+        "unitID": "vaaksaFI",
+        "name": "Vaaksa",
+        "system": "Finnish",
+        "factor": 0.14845
+    },
+    "footFI": {
+        "unitID": "footFI",
+        "name": "Jalka",
+        "system": "Finnish",
+        "factor": 0.2969
+    },
+    "alnFI": {
+        "unitID": "alnFI",
+        "name": "Kyynärä",
+        "system": "Finnish",
+        "factor": 0.5938
+    },
+    "syliFI": {
+        "unitID": "syliFI",
+        "name": "Syli",
+        "system": "Finnish",
+        "factor": 1.7814
+    },
+    "furlongFI": {
+        "unitID": "furlongFI",
+        "name": "Vakomitta",
+        "system": "Finnish",
+        "factor": 213.768
+    },
+    "virstaFI": {
+        "unitID": "virstaFI",
+        "name": "Virsta",
+        "system": "Finnish",
+        "factor": 1068.84
+    },
+    "ruotsinvirstaFI": {
+        "unitID": "ruotsinvirstaFI",
+        "name": "Ruotsinvirsta",
+        "system": "Finnish",
+        "factor": 2672.1
+    },
+    "mileFI": {
+        "unitID": "mileFI",
+        "name": "Peninkulma",
+        "system": "Finnish",
+        "factor": 10688.4
+    },
+    "dagsresaFI": {
+        "unitID": "dagsresaFI",
+        "name": "Päivämatka",
+        "system": "Finnish",
+        "factor": 21376.8
+    },
+    "nautmileFI": {
+        "unitID": "nautmileFI",
+        "name": "Meripeninkulma",
+        "system": "Finnish",
+        "factor": 1852
+    },
+    "tnautmileFI": {
+        "unitID": "tnautmileFI",
+        "name": "Kaapelinmitta",
+        "system": "Finnish",
+        "factor": 185.2
+    },
+    "depthnautmileFI": {
+        "unitID": "depthnautmileFI",
+        "name": "Syli (nautical)",
+        "system": "Finnish",
+        "factor": 1.852
+    },
+    "pointFR": {
+        "unitID": "pointFR",
+        "name": "Point",
+        "system": "French",
+        "factor": 0.000188
+    },
+    "lineFR": {
+        "unitID": "lineFR",
+        "name": "Ligne",
+        "system": "French",
+        "factor": 0.002256
+    },
+    "inchFR": {
+        "unitID": "inchFR",
+        "name": "Pouce",
+        "system": "French",
+        "factor": 0.02707
+    },
+    "footFR": {
+        "unitID": "footFR",
+        "name": "Pied du Roi",
+        "system": "French",
+        "factor": 0.3248
+    },
+    "fathomFR": {
+        "unitID": "fathomFR",
+        "name": "Toise",
+        "system": "French",
+        "factor": 1.949
+    },
+    "perchFR": {
+        "unitID": "perchFR",
+        "name": "Perche d'arpent",
+        "system": "French",
+        "factor": 7.146
+    },
+    "arpentFR": {
+        "unitID": "arpentFR",
+        "name": "Arpent",
+        "system": "French",
+        "factor": 71.46
+    },
+    "leagueuncFR": {
+        "unitID": "leagueuncFR",
+        "name": "Lieue ancienne",
+        "system": "French",
+        "factor": 3248
+    },
+    "leagueparFR": {
+        "unitID": "leagueparFR",
+        "name": "Lieue de Paris",
+        "system": "French",
+        "factor": 3898
+    },
+    "leagueposFR": {
+        "unitID": "leagueposFR",
+        "name": "Lieue des Postes",
+        "system": "French",
+        "factor": 4288
+    },
+    "leaguedegFR": {
+        "unitID": "leaguedegFR",
+        "name": "Lieue de 25 au degré",
+        "system": "French",
+        "factor": 4448
+    },
+    "leaguetarFR": {
+        "unitID": "leaguetarFR",
+        "name": "Lieue tarifaire",
+        "system": "French",
+        "factor": 4678
+    },
+    "mileDE": {
+        "unitID": "mileDE",
+        "name": "Meile",
+        "system": "German",
+        "factor": 7532
+    },
+    "hourDE": {
+        "unitID": "hourDE",
+        "name": "Wegstunde",
+        "system": "German",
+        "factor": 3766
+    },
+    "footDE": {
+        "unitID": "footDE",
+        "name": "Fuß ",
+        "system": "German",
+        "factor": 0.3138536
+    },
+    "rodDE": {
+        "unitID": "rodDE",
+        "name": "Rute",
+        "system": "German",
+        "factor": 3.766
+    },
+    "klafterDE": {
+        "unitID": "klafterDE",
+        "name": "Klafter",
+        "system": "German",
+        "factor": 1.8831216
+    },
+    "lachterDE": {
+        "unitID": "lachterDE",
+        "name": "Lachter",
+        "system": "German",
+        "factor": 2
+    },
+    "ellDE": {
+        "unitID": "ellDE",
+        "name": "Elle",
+        "system": "German",
+        "factor": 0.6669389
+    },
+    "inchDE": {
+        "unitID": "inchDE",
+        "name": "Zoll",
+        "system": "German",
+        "factor": 0.026154466666666668
+    },
+    "lineDE": {
+        "unitID": "lineDE",
+        "name": "Linie",
+        "system": "German",
+        "factor": 0.002179538888888889
+    },
+    "fingerAG": {
+        "unitID": "fingerAG",
+        "name": "δάκτυλος",
+        "system": "Ancient Greek",
+        "factor": 0.0193
+    },
+    "knuckleAG": {
+        "unitID": "knuckleAG",
+        "name": "κόνδυλος",
+        "system": "Ancient Greek",
+        "factor": 0.0385
+    },
+    "palmAG": {
+        "unitID": "palmAG",
+        "name": "παλαιστή",
+        "system": "Ancient Greek",
+        "factor": 0.0771
+    },
+    "footAG": {
+        "unitID": "footAG",
+        "name": "πούς",
+        "system": "Ancient Greek",
+        "factor": 0.3082
+    },
+    "forearmAG": {
+        "unitID": "forearmAG",
+        "name": "πυγμή",
+        "system": "Ancient Greek",
+        "factor": 0.3468
+    },
+    "cubitAG": {
+        "unitID": "cubitAG",
+        "name": "πῆχυς",
+        "system": "Ancient Greek",
+        "factor": 0.4623
+    },
+    "stepAG": {
+        "unitID": "stepAG",
+        "name": "ἁπλοῦν βῆμα ",
+        "system": "Ancient Greek",
+        "factor": 0.77
+    },
+    "paceAG": {
+        "unitID": "paceAG",
+        "name": "βῆμα",
+        "system": "Ancient Greek",
+        "factor": 1.54
+    },
+    "fathomAG": {
+        "unitID": "fathomAG",
+        "name": "ὄργυια",
+        "system": "Ancient Greek",
+        "factor": 1.85
+    },
+    "knotAG": {
+        "unitID": "knotAG",
+        "name": "ἅμμα",
+        "system": "Ancient Greek",
+        "factor": 18.5
+    },
+    "mileAG": {
+        "unitID": "mileAG",
+        "name": "μίλιον",
+        "system": "Ancient Greek",
+        "factor": 1479
+    },
+    "digitBZ": {
+        "unitID": "digitBZ",
+        "name": "δάκτυλος",
+        "system": "Byzantine",
+        "factor": 0.0195
+    },
+    "palmBZ": {
+        "unitID": "palmBZ",
+        "name": "παλαιστή",
+        "system": "Byzantine",
+        "factor": 0.0787
+    },
+    "footBZ": {
+        "unitID": "footBZ",
+        "name": "ποῦς",
+        "system": "Byzantine",
+        "factor": 0.3123
+    },
+    "cubitBZ": {
+        "unitID": "cubitBZ",
+        "name": "δημόσιος πῆχυς",
+        "system": "Byzantine",
+        "factor": 0.4688
+    },
+    "paceBZ": {
+        "unitID": "paceBZ",
+        "name": "βῆμα ἁπλοῦν",
+        "system": "Byzantine",
+        "factor": 0.787
+    },
+    "fathomBZ": {
+        "unitID": "fathomBZ",
+        "name": "ἁπλὴ ὀργυιά",
+        "system": "Byzantine",
+        "factor": 1.87
+    },
+    "perchBZ": {
+        "unitID": "perchBZ",
+        "name": "δεκάποδον",
+        "system": "Byzantine",
+        "factor": 3.148
+    },
+    "furlongBZ": {
+        "unitID": "furlongBZ",
+        "name": "πλέθρον",
+        "system": "Byzantine",
+        "factor": 31.48
+    },
+    "stadionBZ": {
+        "unitID": "stadionBZ",
+        "name": "στάδιον",
+        "system": "Byzantine",
+        "factor": 188.8
+    },
+    "mileBZ": {
+        "unitID": "mileBZ",
+        "name": "μίλιον",
+        "system": "Byzantine",
+        "factor": 1574
+    },
+    "pikGN": {
+        "unitID": "pikGN",
+        "name": "pik",
+        "system": "Guinean",
+        "factor": 0.578
+    },
+    "jacktanGN": {
+        "unitID": "jacktanGN",
+        "name": "jacktan",
+        "system": "Guinean",
+        "factor": 3.658
+    },
+    "toiseHT": {
+        "unitID": "toiseHT",
+        "name": "Toise",
+        "system": "Haitian",
+        "factor": 1.9488
+    },
+    "anneHT": {
+        "unitID": "anneHT",
+        "name": "Anne",
+        "system": "Haitian",
+        "factor": 1.188
+    },
+    "thumbHE": {
+        "unitID": "thumbHE",
+        "name": "אצבע ",
+        "system": "Hebrew",
+        "factor": 0.0219
+    },
+    "handHE": {
+        "unitID": "handHE",
+        "name": "טפח ",
+        "system": "Hebrew",
+        "factor": 0.0876
+    },
+    "spanHE": {
+        "unitID": "spanHE",
+        "name": "זרת ",
+        "system": "Hebrew",
+        "factor": 0.2628
+    },
+    "cubitHE": {
+        "unitID": "cubitHE",
+        "name": "אמה ",
+        "system": "Hebrew",
+        "factor": 0.5256
+    },
+    "mileHE": {
+        "unitID": "mileHE",
+        "name": "מיל",
+        "system": "Hebrew",
+        "factor": 1051.1999999999998
+    },
+    "parasangHE": {
+        "unitID": "parasangHE",
+        "name": "פרסה",
+        "system": "Hebrew",
+        "factor": 4204.799999999999
+    },
+    "mileHU": {
+        "unitID": "mileHU",
+        "name": "mérföld ",
+        "system": "Hungarian",
+        "factor": 7585.944
+    },
+    "rodHU": {
+        "unitID": "rodHU",
+        "name": "rúd ",
+        "system": "Hungarian",
+        "factor": 6.32162
+    },
+    "fathomHU": {
+        "unitID": "fathomHU",
+        "name": "öl ",
+        "system": "Hungarian",
+        "factor": 3.16081
+    },
+    "stepHU": {
+        "unitID": "stepHU",
+        "name": "lépés ",
+        "system": "Hungarian",
+        "factor": 0.948243
+    },
+    "ellHU": {
+        "unitID": "ellHU",
+        "name": "rőf ",
+        "system": "Hungarian",
+        "factor": 0.632162
+    },
+    "footHU": {
+        "unitID": "footHU",
+        "name": "láb ",
+        "system": "Hungarian",
+        "factor": 0.316081
+    },
+    "spanHU": {
+        "unitID": "spanHU",
+        "name": "arasz ",
+        "system": "Hungarian",
+        "factor": 0.197550625
+    },
+    "palmHU": {
+        "unitID": "palmHU",
+        "name": "tenyér ",
+        "system": "Hungarian",
+        "factor": 0.07902025
+    },
+    "thumbHU": {
+        "unitID": "thumbHU",
+        "name": "hüvelyk ",
+        "system": "Hungarian",
+        "factor": 0.026340083333333333
+    },
+    "fingerHU": {
+        "unitID": "fingerHU",
+        "name": "ujj ",
+        "system": "Hungarian",
+        "factor": 0.0197550625
+    },
+    "footIS": {
+        "unitID": "footIS",
+        "name": "fet",
+        "system": "Icelandic",
+        "factor": 0.31385
+    },
+    "lineIS": {
+        "unitID": "lineIS",
+        "name": "lína",
+        "system": "Icelandic",
+        "factor": 0.002179513888888889
+    },
+    "inchIS": {
+        "unitID": "inchIS",
+        "name": "þumlungur",
+        "system": "Icelandic",
+        "factor": 0.02615416666666667
+    },
+    "ellIS": {
+        "unitID": "ellIS",
+        "name": "alin",
+        "system": "Icelandic",
+        "factor": 0.6277
+    },
+    "fathomIS": {
+        "unitID": "fathomIS",
+        "name": "faðmur",
+        "system": "Icelandic",
+        "factor": 1.8831000000000002
+    },
+    "mileIS": {
+        "unitID": "mileIS",
+        "name": "landmíla",
+        "system": "Icelandic",
+        "factor": 7532.400000000001
+    },
+    "thingmannaleithIS": {
+        "unitID": "thingmannaleithIS",
+        "name": "Þingmannaleið ",
+        "system": "Icelandic",
+        "factor": 37662
+    },
+    "nautmileIS": {
+        "unitID": "nautmileIS",
+        "name": "sjómíla",
+        "system": "Icelandic",
+        "factor": 1855
+    },
+    "depaID": {
+        "unitID": "depaID",
+        "name": "Depa",
+        "system": "Indonesian",
+        "factor": 1.7
+    },
+    "hastaID": {
+        "unitID": "hastaID",
+        "name": "Hasta",
+        "system": "Indonesian",
+        "factor": 0.425
+    },
+    "kilanID": {
+        "unitID": "kilanID",
+        "name": "Kilan",
+        "system": "Indonesian",
+        "factor": 0.2125
+    },
+    "grainIR": {
+        "unitID": "grainIR",
+        "name": "Grán",
+        "system": "Irish",
+        "factor": 0.5138888888888888
+    },
+    "thumbIR": {
+        "unitID": "thumbIR",
+        "name": "Ordlach",
+        "system": "Irish",
+        "factor": 1.5416666666666667
+    },
+    "palmIR": {
+        "unitID": "palmIR",
+        "name": "Bas",
+        "system": "Irish",
+        "factor": 6.166666666666667
+    },
+    "fistIR": {
+        "unitID": "fistIR",
+        "name": "Dorn",
+        "system": "Irish",
+        "factor": 9.25
+    },
+    "footIR": {
+        "unitID": "footIR",
+        "name": "Troighid",
+        "system": "Irish",
+        "factor": 0.25
+    },
+    "stepIR": {
+        "unitID": "stepIR",
+        "name": "Céim",
+        "system": "Irish",
+        "factor": 46.25
+    },
+    "rodIR": {
+        "unitID": "rodIR",
+        "name": "Fertach",
+        "system": "Irish",
+        "factor": 222
+    },
+    "forrachIR": {
+        "unitID": "forrachIR",
+        "name": "Forrach",
+        "system": "Irish",
+        "factor": 2664
+    },
+    "moJP": {
+        "unitID": "moJP",
+        "name": "Mō",
+        "symbol": "毛 ",
+        "system": "Japanese",
+        "factor": 0.000030303
+    },
+    "rinJP": {
+        "unitID": "rinJP",
+        "name": "Rin",
+        "symbol": "厘 ",
+        "system": "Japanese",
+        "factor": 0.00030303000000000003
+    },
+    "buJP": {
+        "unitID": "buJP",
+        "name": "Bu",
+        "symbol": "分",
+        "system": "Japanese",
+        "factor": 0.0030303
+    },
+    "sunJP": {
+        "unitID": "sunJP",
+        "name": "Sun",
+        "symbol": "寸",
+        "system": "Japanese",
+        "factor": 0.030303000000000004
+    },
+    "shakuJP": {
+        "unitID": "shakuJP",
+        "name": "Shaku",
+        "symbol": "尺",
+        "system": "Japanese",
+        "factor": 0.30303
+    },
+    "kenJP": {
+        "unitID": "kenJP",
+        "name": "Ken",
+        "symbol": "間",
+        "system": "Japanese",
+        "factor": 1.8181800000000001
+    },
+    "hiroJP": {
+        "unitID": "hiroJP",
+        "name": "Hiro",
+        "symbol": "尋",
+        "system": "Japanese",
+        "factor": 1.8181800000000001
+    },
+    "joJP": {
+        "unitID": "joJP",
+        "name": "Jō ",
+        "symbol": "丈",
+        "system": "Japanese",
+        "factor": 3.0303000000000004
+    },
+    "choJP": {
+        "unitID": "choJP",
+        "name": "Chō ",
+        "symbol": "町",
+        "system": "Japanese",
+        "factor": 109.0908
+    },
+    "riJP": {
+        "unitID": "riJP",
+        "name": "Ri",
+        "symbol": "里",
+        "system": "Japanese",
+        "factor": 3927.2688000000003
+    },
+    "inchKO": {
+        "unitID": "inchKO",
+        "name": "Chi",
+        "symbol": "치",
+        "system": "Korean",
+        "factor": 0.0303
+    },
+    "footKO": {
+        "unitID": "footKO",
+        "name": "Ja",
+        "symbol": "자",
+        "system": "Korean",
+        "factor": 0.303
+    },
+    "paceKO": {
+        "unitID": "paceKO",
+        "name": "Gan",
+        "symbol": "간",
+        "system": "Korean",
+        "factor": 1.818
+    },
+    "fathomKO": {
+        "unitID": "fathomKO",
+        "name": "Jang",
+        "symbol": "장",
+        "system": "Korean",
+        "factor": 3.03
+    },
+    "mileKO": {
+        "unitID": "mileKO",
+        "name": "Ri",
+        "symbol": "리",
+        "system": "Korean",
+        "factor": 393
+    },
+    "pikLY": {
+        "unitID": "pikLY",
+        "name": "Pik",
+        "system": "Libyan",
+        "factor": 0.68
+    },
+    "palmLY": {
+        "unitID": "palmLY",
+        "name": "Palmo",
+        "system": "Libyan",
+        "factor": 0.22666666666666668
+    },
+    "draaLY": {
+        "unitID": "draaLY",
+        "name": "Draa",
+        "system": "Libyan",
+        "factor": 0.46
+    },
+    "rahfMG": {
+        "unitID": "rahfMG",
+        "name": "Rahf",
+        "system": "Malagasy",
+        "factor": 1.18
+    },
+    "inchMT": {
+        "unitID": "inchMT",
+        "name": "Pulzier",
+        "system": "Maltese",
+        "factor": 0.021825
+    },
+    "footMT": {
+        "unitID": "footMT",
+        "name": "Xiber",
+        "system": "Maltese",
+        "factor": 0.2619
+    },
+    "qasbaMT": {
+        "unitID": "qasbaMT",
+        "name": "Qasba",
+        "system": "Maltese",
+        "factor": 2.0952
+    },
+    "grainSUX": {
+        "unitID": "grainSUX",
+        "name": "še",
+        "symbol": "𒊺",
+        "system": "Mesopotamian",
+        "factor": 0.0027602777777777777
+    },
+    "fingerSUX": {
+        "unitID": "fingerSUX",
+        "name": "šu-si",
+        "symbol": "𒋗𒋛 ",
+        "system": "Mesopotamian",
+        "factor": 0.016561666666666666
+    },
+    "footSUX": {
+        "unitID": "footSUX",
+        "name": "šu-du3-a",
+        "symbol": "𒋗𒆕𒀀",
+        "system": "Mesopotamian",
+        "factor": 0.3312333333333333
+    },
+    "cubitSUX": {
+        "unitID": "cubitSUX",
+        "name": "kuš3",
+        "symbol": "𒌑",
+        "system": "Mesopotamian",
+        "factor": 0.49685
+    },
+    "stepSUX": {
+        "unitID": "stepSUX",
+        "name": "ĝiri3",
+        "symbol": "𒈨𒊑",
+        "system": "Mesopotamian",
+        "factor": 0.9937
+    },
+    "reedSUX": {
+        "unitID": "reedSUX",
+        "name": "gi",
+        "symbol": "𒄀",
+        "system": "Mesopotamian",
+        "factor": 2.9811
+    },
+    "rodSUX": {
+        "unitID": "rodSUX",
+        "name": "nindan",
+        "symbol": "𒃻",
+        "system": "Mesopotamian",
+        "factor": 5.9622
+    },
+    "cordSUX": {
+        "unitID": "cordSUX",
+        "name": "eše2",
+        "symbol": "𒂠",
+        "system": "Mesopotamian",
+        "factor": 59.622
+    },
+    "cableSUX": {
+        "unitID": "cableSUX",
+        "name": "uš",
+        "symbol": "𒍑",
+        "system": "Mesopotamian",
+        "factor": 357.73199999999997
+    },
+    "leagueSUX": {
+        "unitID": "leagueSUX",
+        "name": "da-na",
+        "symbol": "𒁕𒈾 ",
+        "system": "Mesopotamian",
+        "factor": 10731.96
+    },
+    "cubitMA": {
+        "unitID": "cubitMA",
+        "name": "Cubit",
+        "system": "Moroccan",
+        "factor": 0.533
+    },
+    "cannaMA": {
+        "unitID": "cannaMA",
+        "name": "Canna",
+        "system": "Moroccan",
+        "factor": 0.533
+    },
+    "picMA": {
+        "unitID": "picMA",
+        "name": "Pic",
+        "system": "Moroccan",
+        "factor": 0.61
+    },
+    "tonniMA": {
+        "unitID": "tonniMA",
+        "name": "Tonni",
+        "system": "Moroccan",
+        "factor": 0.07625
+    },
+    "hsanchiMM": {
+        "unitID": "hsanchiMM",
+        "name": "ဆံချည်",
+        "system": "Burmese",
+        "factor": 0.000079375
+    },
+    "hnanMM": {
+        "unitID": "hnanMM",
+        "name": "နှမ်း",
+        "system": "Burmese",
+        "factor": 0.0007937500000000001
+    },
+    "muyawMM": {
+        "unitID": "muyawMM",
+        "name": "မုယော",
+        "system": "Burmese",
+        "factor": 0.0047625
+    },
+    "letthitMM": {
+        "unitID": "letthitMM",
+        "name": "လက်သစ် ",
+        "system": "Burmese",
+        "factor": 0.01905
+    },
+    "maikMM": {
+        "unitID": "maikMM",
+        "name": "မိုက်",
+        "system": "Burmese",
+        "factor": 0.1524
+    },
+    "htwaMM": {
+        "unitID": "htwaMM",
+        "name": "ထွာ",
+        "system": "Burmese",
+        "factor": 0.22860000000000003
+    },
+    "taungMM": {
+        "unitID": "taungMM",
+        "name": "တောင်",
+        "system": "Burmese",
+        "factor": 0.45720000000000005
+    },
+    "lanMM": {
+        "unitID": "lanMM",
+        "name": "လံ",
+        "system": "Burmese",
+        "factor": 1.8288000000000002
+    },
+    "taMM": {
+        "unitID": "taMM",
+        "name": "တာ",
+        "system": "Burmese",
+        "factor": 3.2004
+    },
+    "scrupleNO": {
+        "unitID": "scrupleNO",
+        "name": "Skruppel",
+        "system": "Norwegian",
+        "factor": 0.00018
+    },
+    "lineNO": {
+        "unitID": "lineNO",
+        "name": "Linje",
+        "system": "Norwegian",
+        "factor": 0.00218
+    },
+    "inchNO": {
+        "unitID": "inchNO",
+        "name": "Tomme",
+        "system": "Norwegian",
+        "factor": 0.0261
+    },
+    "quarterNO": {
+        "unitID": "quarterNO",
+        "name": "Kvarter",
+        "system": "Norwegian",
+        "factor": 0.15687
+    },
+    "footNO": {
+        "unitID": "footNO",
+        "name": "Fot",
+        "system": "Norwegian",
+        "factor": 0.31374
+    },
+    "ellNO": {
+        "unitID": "ellNO",
+        "name": "Alen",
+        "system": "Norwegian",
+        "factor": 0.62748
+    },
+    "fathomNO": {
+        "unitID": "fathomNO",
+        "name": "Favn",
+        "system": "Norwegian",
+        "factor": 1.882
+    },
+    "rodNO": {
+        "unitID": "rodNO",
+        "name": "Stang",
+        "system": "Norwegian",
+        "factor": 3.1374
+    },
+    "mileNO": {
+        "unitID": "mileNO",
+        "name": "Landmil",
+        "system": "Norwegian",
+        "factor": 11295
+    },
+    "cableNO": {
+        "unitID": "cableNO",
+        "name": "Kavellengde",
+        "system": "Norwegian",
+        "factor": 185.2
+    },
+    "nautmileNO": {
+        "unitID": "nautmileNO",
+        "name": "Sjømil ",
+        "system": "Norwegian",
+        "factor": 7433.9
+    },
+    "geomileNO": {
+        "unitID": "geomileNO",
+        "name": "geografisk mil",
+        "system": "Norwegian",
+        "factor": 7421
+    },
+    "muscatOM": {
+        "unitID": "muscatOM",
+        "name": "Muscat",
+        "system": "Omani",
+        "factor": 0.9939020000000001
+    },
+    "digitFA": {
+        "unitID": "digitFA",
+        "name": "انگشت",
+        "system": "Persian",
+        "factor": 0.02
+    },
+    "handFA": {
+        "unitID": "handFA",
+        "name": "dva",
+        "system": "Persian",
+        "factor": 0.1
+    },
+    "footFA": {
+        "unitID": "footFA",
+        "name": "trayas",
+        "system": "Persian",
+        "factor": 0.3
+    },
+    "cubitFA": {
+        "unitID": "cubitFA",
+        "name": "pank'a dva",
+        "system": "Persian",
+        "factor": 0.5
+    },
+    "paceFA": {
+        "unitID": "paceFA",
+        "name": "parik'a",
+        "system": "Persian",
+        "factor": 1.5
+    },
+    "leagueFA": {
+        "unitID": "leagueFA",
+        "name": "parasang",
+        "system": "Persian",
+        "factor": 6000
+    },
+    "piranggotPH": {
+        "unitID": "piranggotPH",
+        "name": "Piranggot",
+        "system": "Philippine",
+        "factor": 1.27
+    },
+    "sandamakPH": {
+        "unitID": "sandamakPH",
+        "name": "Sandamak",
+        "system": "Philippine",
+        "factor": 10.16
+    },
+    "dangkalPH": {
+        "unitID": "dangkalPH",
+        "name": "Dangkal",
+        "system": "Philippine",
+        "factor": 20.32
+    },
+    "talampakanPH": {
+        "unitID": "talampakanPH",
+        "name": "Talampakan",
+        "system": "Philippine",
+        "factor": 30.48
+    },
+    "bisigPH": {
+        "unitID": "bisigPH",
+        "name": "Bisig",
+        "system": "Philippine",
+        "factor": 40.64
+    },
+    "dipaPH": {
+        "unitID": "dipaPH",
+        "name": "Dipa",
+        "system": "Philippine",
+        "factor": 172.72
+    },
+    "ellPL": {
+        "unitID": "ellPL",
+        "name": "łokieć ",
+        "system": "Polish",
+        "factor": 0.5955
+    },
+    "footPL": {
+        "unitID": "footPL",
+        "name": "stopa",
+        "system": "Polish",
+        "factor": 0.29775
+    },
+    "sztychPL": {
+        "unitID": "sztychPL",
+        "name": "sztych",
+        "system": "Polish",
+        "factor": 0.1985
+    },
+    "quarterPL": {
+        "unitID": "quarterPL",
+        "name": "ćwierć",
+        "system": "Polish",
+        "factor": 0.148875
+    },
+    "palmPL": {
+        "unitID": "palmPL",
+        "name": "dłoń",
+        "system": "Polish",
+        "factor": 0.0744375
+    },
+    "inchPL": {
+        "unitID": "inchPL",
+        "name": "cal",
+        "system": "Polish",
+        "factor": 0.0248125
+    },
+    "fathomPL": {
+        "unitID": "fathomPL",
+        "name": "sążeń",
+        "system": "Polish",
+        "factor": 1.7865000000000002
+    },
+    "pointPT": {
+        "unitID": "pointPT",
+        "name": "Ponto",
+        "system": "Portuguese",
+        "factor": 0.00019097222222222223
+    },
+    "linePT": {
+        "unitID": "linePT",
+        "name": "Linha",
+        "system": "Portuguese",
+        "factor": 0.0022916666666666667
+    },
+    "inchPT": {
+        "unitID": "inchPT",
+        "name": "Polegada",
+        "system": "Portuguese",
+        "factor": 0.027500000000000004
+    },
+    "spanPT": {
+        "unitID": "spanPT",
+        "name": "Palmo de craveira",
+        "system": "Portuguese",
+        "factor": 0.22000000000000003
+    },
+    "footPT": {
+        "unitID": "footPT",
+        "name": "Pé",
+        "system": "Portuguese",
+        "factor": 0.33
+    },
+    "cubitPT": {
+        "unitID": "cubitPT",
+        "name": "Côvado",
+        "system": "Portuguese",
+        "factor": 0.66
+    },
+    "yardPT": {
+        "unitID": "yardPT",
+        "name": "Vara",
+        "system": "Portuguese",
+        "factor": 1.1
+    },
+    "geopacePT": {
+        "unitID": "geopacePT",
+        "name": "Passo geométrico",
+        "system": "Portuguese",
+        "factor": 1.6500000000000001
+    },
+    "toisePT": {
+        "unitID": "toisePT",
+        "name": "Toesa",
+        "system": "Portuguese",
+        "factor": 1.98
+    },
+    "fathomPT": {
+        "unitID": "fathomPT",
+        "name": "Braça",
+        "system": "Portuguese",
+        "factor": 2.2
+    },
+    "milePT": {
+        "unitID": "milePT",
+        "name": "Milha geográfica",
+        "system": "Portuguese",
+        "factor": 1852
+    },
+    "league20PT": {
+        "unitID": "league20PT",
+        "name": "Légua de 20 ao grau",
+        "system": "Portuguese",
+        "factor": 5555
+    },
+    "league18PT": {
+        "unitID": "league18PT",
+        "name": "Légua de 18 ao grau",
+        "system": "Portuguese",
+        "factor": 6173
+    },
+    "fingerLA": {
+        "unitID": "fingerLA",
+        "name": "Digitus",
+        "system": "Roman",
+        "factor": 0.0185
+    },
+    "inchLA": {
+        "unitID": "inchLA",
+        "name": "Uncia",
+        "system": "Roman",
+        "factor": 0.024666666666666667
+    },
+    "palmLA": {
+        "unitID": "palmLA",
+        "name": "Palmus",
+        "system": "Roman",
+        "factor": 0.074
+    },
+    "footLA": {
+        "unitID": "footLA",
+        "name": "pes",
+        "system": "Roman",
+        "factor": 0.296
+    },
+    "cubitLA": {
+        "unitID": "cubitLA",
+        "name": "Cubitum",
+        "system": "Roman",
+        "factor": 0.44399999999999995
+    },
+    "stepLA": {
+        "unitID": "stepLA",
+        "name": "Gradus",
+        "system": "Roman",
+        "factor": 0.74
+    },
+    "paceLA": {
+        "unitID": "paceLA",
+        "name": "Passus",
+        "system": "Roman",
+        "factor": 1.48
+    },
+    "perchLA": {
+        "unitID": "perchLA",
+        "name": "Pertica",
+        "system": "Roman",
+        "factor": 2.96
+    },
+    "pathLA": {
+        "unitID": "pathLA",
+        "name": "Actus",
+        "system": "Roman",
+        "factor": 35.519999999999996
+    },
+    "stadeLA": {
+        "unitID": "stadeLA",
+        "name": "Stadium",
+        "system": "Roman",
+        "factor": 185
+    },
+    "mileLA": {
+        "unitID": "mileLA",
+        "name": "Mille Passus",
+        "system": "Roman",
+        "factor": 1480
+    },
+    "leagueLA": {
+        "unitID": "leagueLA",
+        "name": "Leuga",
+        "system": "Roman",
+        "factor": 2220
+    },
+    "palmRO": {
+        "unitID": "palmRO",
+        "name": "Palmă",
+        "system": "Romanian",
+        "factor": 0.25
+    },
+    "stanjenRO": {
+        "unitID": "stanjenRO",
+        "name": "Stânjen",
+        "system": "Romanian",
+        "factor": 2
+    },
+    "cubitRO": {
+        "unitID": "cubitRO",
+        "name": "Cot",
+        "system": "Romanian",
+        "factor": 0.664
+    },
+    "leagueRO": {
+        "unitID": "leagueRO",
+        "name": "Leghe",
+        "system": "Romanian",
+        "factor": 4444
+    },
+    "pointRU": {
+        "unitID": "pointRU",
+        "name": "то́чка",
+        "system": "Russian",
+        "factor": 0.000254
+    },
+    "lineRU": {
+        "unitID": "lineRU",
+        "name": "ли́ния",
+        "system": "Russian",
+        "factor": 0.00254
+    },
+    "inchRU": {
+        "unitID": "inchRU",
+        "name": "дюйм ",
+        "system": "Russian",
+        "factor": 0.025400000000000002
+    },
+    "tipRU": {
+        "unitID": "tipRU",
+        "name": "вершо́к",
+        "system": "Russian",
+        "factor": 0.04445
+    },
+    "palmRU": {
+        "unitID": "palmRU",
+        "name": "ладонь",
+        "system": "Russian",
+        "factor": 0.07620000000000002
+    },
+    "quarterRU": {
+        "unitID": "quarterRU",
+        "name": "пядь",
+        "system": "Russian",
+        "factor": 0.1778
+    },
+    "footRU": {
+        "unitID": "footRU",
+        "name": "фут",
+        "system": "Russian",
+        "factor": 0.30480000000000007
+    },
+    "elbowRU": {
+        "unitID": "elbowRU",
+        "name": "локоть",
+        "system": "Russian",
+        "factor": 0.4572000000000001
+    },
+    "stepRU": {
+        "unitID": "stepRU",
+        "name": "шаг",
+        "system": "Russian",
+        "factor": 0.7112
+    },
+    "yardRU": {
+        "unitID": "yardRU",
+        "name": "арши́н",
+        "system": "Russian",
+        "factor": 0.7112
+    },
+    "fathomRU": {
+        "unitID": "fathomRU",
+        "name": "саже́нь",
+        "system": "Russian",
+        "factor": 2.1336000000000004
+    },
+    "turnRU": {
+        "unitID": "turnRU",
+        "name": "верста́",
+        "system": "Russian",
+        "factor": 1066.8000000000002
+    },
+    "inchSC": {
+        "unitID": "inchSC",
+        "name": "Inch",
+        "system": "Scottish",
+        "factor": 0.02544
+    },
+    "footSC": {
+        "unitID": "footSC",
+        "name": "Fit",
+        "system": "Scottish",
+        "factor": 0.3053
+    },
+    "yardSC": {
+        "unitID": "yardSC",
+        "name": "Yaird",
+        "system": "Scottish",
+        "factor": 0.9159
+    },
+    "ellSC": {
+        "unitID": "ellSC",
+        "name": "Ell",
+        "system": "Scottish",
+        "factor": 0.9413
+    },
+    "fallSC": {
+        "unitID": "fallSC",
+        "name": "Faw",
+        "system": "Scottish",
+        "factor": 5.648
+    },
+    "mileSC": {
+        "unitID": "mileSC",
+        "name": "Mile",
+        "system": "Scottish",
+        "factor": 1807
+    },
+    "archineRS": {
+        "unitID": "archineRS",
+        "name": "Archine",
+        "system": "Serbian",
+        "factor": 0.711
+    },
+    "cubitSG": {
+        "unitID": "cubitSG",
+        "name": "Hasta",
+        "system": "Singaporean",
+        "factor": 0.4572
+    },
+    "topSO": {
+        "unitID": "topSO",
+        "name": "Top",
+        "system": "Somalian",
+        "factor": 3.92
+    },
+    "cubitoSO": {
+        "unitID": "cubitoSO",
+        "name": "Cubito",
+        "system": "Somalian",
+        "factor": 0.5599999999999999
+    },
+    "pointES": {
+        "unitID": "pointES",
+        "name": "Punto",
+        "system": "Spanish",
+        "factor": 0.00016122685185185185
+    },
+    "lineES": {
+        "unitID": "lineES",
+        "name": "Línea",
+        "system": "Spanish",
+        "factor": 0.0019347222222222222
+    },
+    "inchES": {
+        "unitID": "inchES",
+        "name": "Pulgada",
+        "system": "Spanish",
+        "factor": 0.023216666666666667
+    },
+    "yardES": {
+        "unitID": "yardES",
+        "name": "Vara",
+        "system": "Spanish",
+        "factor": 0.8358000000000001
+    },
+    "paceES": {
+        "unitID": "paceES",
+        "name": "Paso",
+        "system": "Spanish",
+        "factor": 1.393
+    },
+    "mileES": {
+        "unitID": "mileES",
+        "name": "Milla",
+        "system": "Spanish",
+        "factor": 1393
+    },
+    "leagueES": {
+        "unitID": "leagueES",
+        "name": "Legua",
+        "system": "Spanish",
+        "factor": 4179
+    },
+    "forearmSV": {
+        "unitID": "forearmSV",
+        "name": "Aln",
+        "system": "Swedish",
+        "factor": 0.5937
+    },
+    "fathomSV": {
+        "unitID": "fathomSV",
+        "name": "Famn",
+        "system": "Swedish",
+        "factor": 1.7811
+    },
+    "footSV": {
+        "unitID": "footSV",
+        "name": "Fot",
+        "system": "Swedish",
+        "factor": 0.29685
+    },
+    "quarterSV": {
+        "unitID": "quarterSV",
+        "name": "Kvarter",
+        "system": "Swedish",
+        "factor": 0.148425
+    },
+    "inchSV": {
+        "unitID": "inchSV",
+        "name": "Tum",
+        "system": "Swedish",
+        "factor": 0.0247
+    },
+    "lineSV": {
+        "unitID": "lineSV",
+        "name": "Linje",
+        "system": "Swedish",
+        "factor": 0.00296
+    },
+    "mileSV": {
+        "unitID": "mileSV",
+        "name": "Mil",
+        "system": "Swedish",
+        "factor": 10690
+    },
+    "newmileSV": {
+        "unitID": "newmileSV",
+        "name": "Nymil",
+        "system": "Swedish",
+        "factor": 10000
+    },
+    "fussCH": {
+        "unitID": "fussCH",
+        "name": "Pied",
+        "system": "Swiss",
+        "factor": 0.3
+    },
+    "lineCH": {
+        "unitID": "lineCH",
+        "name": "Ligne",
+        "system": "Swiss",
+        "factor": 0.0020833333333333333
+    },
+    "pouceCH": {
+        "unitID": "pouceCH",
+        "name": "Pouce",
+        "system": "Swiss",
+        "factor": 0.024999999999999998
+    },
+    "auneCH": {
+        "unitID": "auneCH",
+        "name": "Aune",
+        "system": "Swiss",
+        "factor": 0.6
+    },
+    "toiseCH": {
+        "unitID": "toiseCH",
+        "name": "Toise",
+        "system": "Swiss",
+        "factor": 1.7999999999999998
+    },
+    "percheCH": {
+        "unitID": "percheCH",
+        "name": "Perche",
+        "system": "Swiss",
+        "factor": 4.8
+    },
+    "leagueCH": {
+        "unitID": "leagueCH",
+        "name": "Lieue",
+        "system": "Swiss",
+        "factor": 4800
+    },
+    "hunTW": {
+        "unitID": "hunTW",
+        "name": "Hun",
+        "symbol": "分",
+        "system": "Taiwanese",
+        "factor": 0.00303
+    },
+    "chhunTW": {
+        "unitID": "chhunTW",
+        "name": "Chhùn",
+        "symbol": "寸",
+        "system": "Taiwanese",
+        "factor": 0.0303
+    },
+    "chhiohTW": {
+        "unitID": "chhiohTW",
+        "name": "Chhioh",
+        "symbol": "尺",
+        "system": "Taiwanese",
+        "factor": 0.303
+    },
+    "tngTW": {
+        "unitID": "tngTW",
+        "name": "Tn̄g",
+        "symbol": "丈",
+        "system": "Taiwanese",
+        "factor": 3.03
+    },
+    "pointTKR": {
+        "unitID": "pointTKR",
+        "name": "Nokta",
+        "system": "Turkish",
+        "factor": 0.000219
+    },
+    "lineTKR": {
+        "unitID": "lineTKR",
+        "name": "Hat",
+        "system": "Turkish",
+        "factor": 0.00263
+    },
+    "fingerTKR": {
+        "unitID": "fingerTKR",
+        "name": "Parmak",
+        "system": "Turkish",
+        "factor": 0.03157
+    },
+    "footTKR": {
+        "unitID": "footTKR",
+        "name": "Ayak",
+        "system": "Turkish",
+        "factor": 0.37887
+    },
+    "ellTKR": {
+        "unitID": "ellTKR",
+        "name": "Endaze",
+        "system": "Turkish",
+        "factor": 0.65
+    },
+    "yardTKR": {
+        "unitID": "yardTKR",
+        "name": "Zirai",
+        "system": "Turkish",
+        "factor": 0.75774
+    },
+    "fathomTKR": {
+        "unitID": "fathomTKR",
+        "name": "Kulaç",
+        "system": "Turkish",
+        "factor": 1.8288
+    },
+    "rangeTKR": {
+        "unitID": "rangeTKR",
+        "name": "Berid",
+        "system": "Turkish",
+        "factor": 227
+    },
+    "nautmileTKR": {
+        "unitID": "nautmileTKR",
+        "name": "Eski Mil",
+        "system": "Turkish",
+        "factor": 1894.35
+    },
+    "leagueTKR": {
+        "unitID": "leagueTKR",
+        "name": "Fersah",
+        "system": "Turkish",
+        "factor": 5685
+    },
+    "thuocVN": {
+        "unitID": "thuocVN",
+        "name": "thước ",
+        "symbol": "𡱩",
+        "system": "Vietnamese",
+        "factor": 1
+    },
+    "tacVN": {
+        "unitID": "tacVN",
+        "name": "tấc",
+        "symbol": "𡬷",
+        "system": "Vietnamese",
+        "factor": 0.1
+    },
+    "phanVN": {
+        "unitID": "phanVN",
+        "name": "phân",
+        "symbol": "分",
+        "system": "Vietnamese",
+        "factor": 0.01
+    },
+    "lyVN": {
+        "unitID": "lyVN",
+        "name": "ly",
+        "symbol": "釐",
+        "system": "Vietnamese",
+        "factor": 0.001
     }
 }
