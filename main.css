@@ -603,3 +603,25 @@ input[readonly] {
 .about-close:hover {
     background: #5568d3;
 }
+
+.github-btn {
+    background: white;
+    color: #333;
+    border: 2px solid white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+}
+
+.github-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
