@@ -100,6 +100,21 @@ function closeUnitModal() {
     modal.classList.remove('show');
 }
 
+// About button
+document.getElementById('aboutBtn').addEventListener('click', () => {
+    document.getElementById('aboutModal').classList.add('show');
+});
+
+document.getElementById('closeAbout').addEventListener('click', () => {
+    document.getElementById('aboutModal').classList.remove('show');
+});
+
+document.getElementById('aboutModal').addEventListener('click', (e) => {
+    if (e.target.id === 'aboutModal') {
+        document.getElementById('aboutModal').classList.remove('show');
+    }
+});
+
 // Render unit list in modal
 async function renderUnitList(searchTerm = '') {
     const unitList = document.getElementById('unitList');

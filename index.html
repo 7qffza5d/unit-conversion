@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Unit Converter</h1>
+        <button id="aboutBtn" class="about-btn">About</button>
         
         <div class="converter-card">
             <div class="form-group">
@@ -68,6 +69,29 @@
                     <div id="prefixGrid" class="prefix-grid"></div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="about-modal">
+        <div class="about-content">
+            <h2>About Unit Converter</h2>
+            <p>
+                This is a comprehensive unit conversion tool that supports various measurement systems including Metric, Imperial, and Historical units.
+            </p>
+            <p>
+                <strong>Features:</strong>
+            </p>
+            <ul>
+                <li>Convert between multiple unit systems</li>
+                <li>Add metric prefixes to any unit</li>
+                <li>Search and filter units easily</li>
+               <li>Support for temperature scales with offset conversions</li>
+            </ul>
+            <p>
+                Built with modern web technologies and designed for ease of use.
+            </p>
+            <button id="closeAbout" class="about-close">Close</button>
         </div>
     </div>
 
