@@ -1,12 +1,56 @@
 {
-  "Metric": {
-    "name": "Metric",
-    "description": "International System of Units (SI)",
-    "color": "#667eea"
-  },
-  "Celsius Scale": {
-    "name": "Celsius Scale",
-    "description": "",
-    "color": "#667eea"
-  }
+    "Metric": {
+        "unitID": "Metric",
+        "name": "Metric",
+        "description": "The metric system is a system of measurement that standardises a set of base units and a nomenclature for describing relatively large and small quantities using decimal-based multiplicative unit prefixes. The system was first suggested by Gabriel Mouton, a priest of the Collegiate Church of St Paul in Lyon, France, and adopted by the Assemblée nationale during the French Revolutionary era.",
+        "color": "#667eea"
+    },
+    "Celsius Scale": {
+        "unitID": "Celsius Scale",
+        "name": "Celsius Scale",
+        "description": "The Celsius Scale was first proposed by Anders Celsius in 1742. The Scale has 0° as the freezing point, and 100° as the boiling point. The Kelvin has the same scale, but with 0 as absolute zero.",
+        "color": "#667eea"
+    },
+    "Fahrenheit Scale": {
+        "unitID": "Fahrenheit Scale",
+        "name": "Fahrenheit Scale",
+        "description": "The Fahrenheit Scale was first proposed by Daniel Gabriel Fahrenheit in 1724. The Scale has 32° as the freezing point, and 212° as the boiling point. The Rankine has the same scale, but with 0 as absolute zero.",
+        "color": "#667eea"
+    },
+    "Newton Scale": {
+        "unitID": "Newton Scale",
+        "name": "Newton Scale",
+        "description": "The Newton Scale was devised by Sir Isaac Newton in 1701, as the first objective attempt at an objective measure of heat. The scale has 0° as the freezing point, and 34° as the boiling point. However, his frames of reference that he provided were ambiguous.",
+        "color": "#667eea"
+    },
+    "Delisle Scale": {
+        "unitID": "Delisle Scale",
+        "name": "Delisle Scale",
+        "description": "The Delisle scale was devised by Joseph-Nicolas Delisle in 1732. It has 150° as the freezing point, and 0° as the boiling point, which is inverted from most other systems.",
+        "color": "#667eea"
+    },
+    "Réaumur Scale": {
+        "unitID": "Réaumur Scale",
+        "name": "Réaumur Scale",
+        "description": "The Réaumur scale was proposed by René Antoine Ferchault de Réaumur in 1730. It has 0° as the freezing point, and 80° as the boiling point.",
+        "color": "#667eea"
+    },
+    "Rømer Scale": {
+        "unitID": "Rømer Scale",
+        "name": "Rømer Scale",
+        "description": "The Rømer scale was developed by Ole Christensen Rømer in 1702. It has 7.5° as the freezing point, and 60° as the boiling point.",
+        "color": "#667eea"
+    },
+    "US Customary": {
+        "unitID": "US Customary",
+        "name": "US Customary",
+        "description": "United States customary units form a system of measurement units commonly used in the United States and most U.S. territories since being standardized and adopted in 1832. The United States customary system developed from English units that were in use in the British Empire before the U.S. became an independent country.",
+        "color": "#667eea"
+    },
+    "Thai": {
+        "unitID": "Thai",
+        "name": "Thai",
+        "description": "Before metrication, the traditional system of measurement used in Thailand employed anthropic units. Some of these units are still in use, albeit standardised to SI/metric measurements.",
+        "color": "#667eea"
+    }
 }
